@@ -16,5 +16,10 @@ namespace advanced_horse_race_tipster
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
