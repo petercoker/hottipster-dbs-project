@@ -8,6 +8,7 @@ namespace HotTipster
 {
     public enum HorseNameEnum
     {
+        Null,
         Cheetah,
         Thunder,
         Flash,
