@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace advanced_horse_race_tipster
+namespace HotTipster
 {
     static class Program
     {

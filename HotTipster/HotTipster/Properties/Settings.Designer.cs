@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace advanced_horse_race_tipster.Properties
+namespace HotTipster.Properties
 {
 
 
