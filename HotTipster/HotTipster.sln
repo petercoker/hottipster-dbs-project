@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotTipster", "HotTipster\HotTipster.csproj", "{865B1EBA-6A48-4CDB-84BA-C9EAC30EE7C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotTipsterTestProject", "HotTipsterTestProject\HotTipsterTestProject.csproj", "{501C118E-6EA0-47BF-93D4-BC8BEE89ED8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{865B1EBA-6A48-4CDB-84BA-C9EAC30EE7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865B1EBA-6A48-4CDB-84BA-C9EAC30EE7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865B1EBA-6A48-4CDB-84BA-C9EAC30EE7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501C118E-6EA0-47BF-93D4-BC8BEE89ED8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501C118E-6EA0-47BF-93D4-BC8BEE89ED8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501C118E-6EA0-47BF-93D4-BC8BEE89ED8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501C118E-6EA0-47BF-93D4-BC8BEE89ED8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
