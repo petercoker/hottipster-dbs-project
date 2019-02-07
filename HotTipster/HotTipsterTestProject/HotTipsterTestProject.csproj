@@ -12,4 +12,9 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="TestGUI\" />
+    <Folder Include="TestDataAccess\" />
+  </ItemGroup>
+
 </Project>
