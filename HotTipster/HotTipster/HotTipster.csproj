@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\BetRecords.cs" />
+    <Compile Include="BusinessLogic\ExtensionMethods.cs" />
+    <Compile Include="BusinessLogic\var.cs" />
     <Compile Include="GUI\HotTipsterForm.cs">
       <SubType>Form</SubType>
     </Compile>
