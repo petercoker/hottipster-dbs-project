@@ -3,7 +3,6 @@ namespace HotTipster
 {
     public enum RaceCourseEnum
     {
-        Null,
         Sandown,
         Ayr,
         Fairyhouse,

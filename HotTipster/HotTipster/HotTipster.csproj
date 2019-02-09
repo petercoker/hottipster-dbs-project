@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{865B1EBA-6A48-4CDB-84BA-C9EAC30EE7C1}</ProjectGuid>
+    <ProjectGuid>{7C464A07-3400-459C-A850-9DFACE33BC3D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>HotTipster</RootNamespace>
     <AssemblyName>HotTipster</AssemblyName>
@@ -46,17 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+<<<<<<< HEAD
+    <Compile Include="BusinessLogic\HorseBet.cs" />
+    <Compile Include="DataAccess\BetRecords.cs" />
+    <Compile Include="DataAccess\HotTipsterMethods.cs" />
+    <Compile Include="BusinessLogic\HorseNameEnum.cs" />
+    <Compile Include="BusinessLogic\RaceCourseEnum.cs" />
+=======
+    <Compile Include="BusinessLogic\BetRecords.cs" />
+    <Compile Include="BusinessLogic\ExtensionMethods.cs" />
+    <Compile Include="BusinessLogic\var.cs" />
+>>>>>>> Beta
+    <Compile Include="GUI\HotTipsterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\HotTipsterForm.Designer.cs">
+      <DependentUpon>HotTipsterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessLogic\HorseNameEnum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RaceCourseEnum.cs" />
-    <Compile Include="Report.cs" />
-    <Compile Include="Reports.cs" />
+<<<<<<< HEAD
+    <EmbeddedResource Include="GUI\HotTipsterForm.resx">
+      <DependentUpon>HotTipsterForm.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+    <Compile Include="BusinessLogic\RaceCourseEnum.cs" />
+    <Compile Include="BusinessLogic\Bet.cs" />
+>>>>>>> Beta
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,5 +96,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
+  <ItemGroup />
+=======
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
+  </ItemGroup>
+>>>>>>> Beta
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
