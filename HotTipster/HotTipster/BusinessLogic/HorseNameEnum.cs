@@ -8,7 +8,6 @@ namespace HotTipster
 {
     public enum HorseNameEnum
     {
-<<<<<<< HEAD
         Cheetah,
         Thunder,
         Flash,
@@ -24,24 +23,6 @@ namespace HotTipster
         Lucky,
         Pablo,
         Horseshoe,
-=======
-        //Cheetah,
-        //Thunder,
-        //Flash,
-        //Blot,
-        //Quicksilver,
-        //Lightning,
-        //QuickFeet,
-        //Speedee,
-        //Zeus,
-        //President,
-        //Sheriff,
-        //Deputy,
-        //Lucky,
-        //Pablo,
-        //Colt,
-        //Horseshoe,
->>>>>>> Beta
         Barley,
         Bronco,
         Blazer,
@@ -61,11 +42,6 @@ namespace HotTipster
         Clydesdale,
         Wrangler,
         Jupiter,
-<<<<<<< HEAD
-        Tennessee
-
-
-=======
         Tennessee,
         Texas,
         Diesel,
@@ -79,6 +55,5 @@ namespace HotTipster
         Steeltoe,
         Officer,
         Rushmore
->>>>>>> Beta
     }
 }

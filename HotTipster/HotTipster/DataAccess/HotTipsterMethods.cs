@@ -22,7 +22,7 @@ namespace HotTipster.BusinessLogic
             var horseBets = BetRecords.LoadRoads();
             foreach (var horseBet in horseBets)
             {
-                using (var fileStream = new FileStream(@"C:\Users\sonol\Downloads\_pcloud\_repositories\github\advanced-horse-race-tipster\HotTipster\HotTipsterReport.txt",
+                using (var fileStream = new FileStream(@"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\HotTipsterReport.txt",
                     FileMode.Append, FileAccess.Write, FileShare.None))
                 using (var binaryWriter = new BinaryWriter(fileStream))
                 {
@@ -43,7 +43,7 @@ namespace HotTipster.BusinessLogic
             decimal amount, bool result)
         {
             using (var fileStream = File.Open(
-                @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\advanced-horse-race-tipster\HotTipster\HotTipsterReport.txt",
+                @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\HotTipsterReport.txt",
                 FileMode.Open))
             {
                 using (var binaryWriter = new BinaryWriter(fileStream))
@@ -70,7 +70,7 @@ namespace HotTipster.BusinessLogic
 
             using (Stream fileStream =
                 File.Open(
-                    @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\advanced-horse-race-tipster\HotTipster\HotTipsterReport.txt",
+                    @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\HotTipsterReport.txt",
                     FileMode.Open))
             {
                 using (var binaryReader = new BinaryReader(fileStream))

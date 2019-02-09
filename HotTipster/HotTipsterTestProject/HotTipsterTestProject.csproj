@@ -13,8 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TestGUI\" />
     <Folder Include="TestDataAccess\" />
+    <Folder Include="TestGUI\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HotTipster\HotTipster.csproj" />
   </ItemGroup>
 
 </Project>

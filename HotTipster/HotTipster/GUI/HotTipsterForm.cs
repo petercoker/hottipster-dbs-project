@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HotTipster
 {
-    public partial class HotTipsterForm : Form
+    public partial class Form1 : Form
     {
-        public HotTipsterForm()
+        public Form1()
         {
             InitializeComponent();
         }
