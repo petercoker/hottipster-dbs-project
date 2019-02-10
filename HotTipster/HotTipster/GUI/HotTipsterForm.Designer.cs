@@ -245,7 +245,7 @@
             this.ClientSize = new System.Drawing.Size(505, 573);
             this.Controls.Add(this.grpStartBox);
             this.Name = "Form1";
-            this.Text = "Hot Tipster";
+            this.Text = "HotTipster";
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).EndInit();
             this.grpStartBox.ResumeLayout(false);
             this.grpStartBox.PerformLayout();
