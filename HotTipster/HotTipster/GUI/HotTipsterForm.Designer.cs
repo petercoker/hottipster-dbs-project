@@ -210,23 +210,25 @@
             // 
             // btnAddNewRacecourseName
             // 
+            this.btnAddNewRacecourseName.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAddNewRacecourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewRacecourseName.Location = new System.Drawing.Point(393, 226);
             this.btnAddNewRacecourseName.Name = "btnAddNewRacecourseName";
             this.btnAddNewRacecourseName.Size = new System.Drawing.Size(74, 32);
             this.btnAddNewRacecourseName.TabIndex = 14;
             this.btnAddNewRacecourseName.Text = "New";
-            this.btnAddNewRacecourseName.UseVisualStyleBackColor = true;
+            this.btnAddNewRacecourseName.UseVisualStyleBackColor = false;
             // 
             // btnAddNewHorseName
             // 
+            this.btnAddNewHorseName.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAddNewHorseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewHorseName.Location = new System.Drawing.Point(393, 281);
             this.btnAddNewHorseName.Name = "btnAddNewHorseName";
             this.btnAddNewHorseName.Size = new System.Drawing.Size(74, 32);
             this.btnAddNewHorseName.TabIndex = 15;
             this.btnAddNewHorseName.Text = "New";
-            this.btnAddNewHorseName.UseVisualStyleBackColor = true;
+            this.btnAddNewHorseName.UseVisualStyleBackColor = false;
             // 
             // btnAddBet
             // 
