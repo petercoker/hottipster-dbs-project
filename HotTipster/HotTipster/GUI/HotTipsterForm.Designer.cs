@@ -231,9 +231,9 @@
             // btnAddBet
             // 
             this.btnAddBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBet.Location = new System.Drawing.Point(119, 482);
+            this.btnAddBet.Location = new System.Drawing.Point(174, 482);
             this.btnAddBet.Name = "btnAddBet";
-            this.btnAddBet.Size = new System.Drawing.Size(167, 61);
+            this.btnAddBet.Size = new System.Drawing.Size(198, 61);
             this.btnAddBet.TabIndex = 18;
             this.btnAddBet.Text = "Add Bet";
             this.btnAddBet.UseVisualStyleBackColor = true;
