@@ -45,8 +45,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRacecourseName = new System.Windows.Forms.TextBox();
+            this.txtHorseName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -190,9 +190,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txtHorseName);
             this.tabPage1.Controls.Add(this.picHorseBet);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtRacecourseName);
             this.tabPage1.Controls.Add(this.lblBetID);
             this.tabPage1.Controls.Add(this.btnAddBet);
             this.tabPage1.Controls.Add(this.lblRacecourseName);
@@ -223,19 +223,19 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtRacecourseName
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 26);
-            this.textBox1.TabIndex = 19;
+            this.txtRacecourseName.Location = new System.Drawing.Point(180, 236);
+            this.txtRacecourseName.Name = "txtRacecourseName";
+            this.txtRacecourseName.Size = new System.Drawing.Size(293, 26);
+            this.txtRacecourseName.TabIndex = 19;
             // 
-            // textBox2
+            // txtHorseName
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 286);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 26);
-            this.textBox2.TabIndex = 20;
+            this.txtHorseName.Location = new System.Drawing.Point(180, 286);
+            this.txtHorseName.Name = "txtHorseName";
+            this.txtHorseName.Size = new System.Drawing.Size(293, 26);
+            this.txtHorseName.TabIndex = 20;
             // 
             // Form1
             // 
@@ -270,8 +270,8 @@
         private System.Windows.Forms.Button btnAddBet;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtHorseName;
+        private System.Windows.Forms.TextBox txtRacecourseName;
         private System.Windows.Forms.TabPage tabPage2;
     }
 }
