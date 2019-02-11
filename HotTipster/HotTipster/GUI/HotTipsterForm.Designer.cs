@@ -48,9 +48,18 @@
             this.txtRacecourseName = new System.Windows.Forms.TextBox();
             this.txtHorseName = new System.Windows.Forms.TextBox();
             this.tpSearchBetTicket = new System.Windows.Forms.TabPage();
+            this.rtbDisplay = new System.Windows.Forms.RichTextBox();
+            this.btnShowAllBetRecords = new System.Windows.Forms.Button();
+            this.btnOrderBetsByDate = new System.Windows.Forms.Button();
+            this.btnCreateFileOfRecord = new System.Windows.Forms.Button();
+            this.btnBetsSuccessRate = new System.Windows.Forms.Button();
+            this.btnMaxWonLost = new System.Windows.Forms.Button();
+            this.btnMostUsedRaceCourse = new System.Windows.Forms.Button();
+            this.lblDataQueries = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tbcAddRecord.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
+            this.tpShowReport.SuspendLayout();
             this.SuspendLayout();
             // 
             // picHorseBet
@@ -221,6 +230,14 @@
             // tpShowReport
             // 
             this.tpShowReport.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpShowReport.Controls.Add(this.lblDataQueries);
+            this.tpShowReport.Controls.Add(this.btnMostUsedRaceCourse);
+            this.tpShowReport.Controls.Add(this.btnMaxWonLost);
+            this.tpShowReport.Controls.Add(this.btnBetsSuccessRate);
+            this.tpShowReport.Controls.Add(this.btnCreateFileOfRecord);
+            this.tpShowReport.Controls.Add(this.btnOrderBetsByDate);
+            this.tpShowReport.Controls.Add(this.btnShowAllBetRecords);
+            this.tpShowReport.Controls.Add(this.rtbDisplay);
             this.tpShowReport.Location = new System.Drawing.Point(4, 29);
             this.tpShowReport.Name = "tpShowReport";
             this.tpShowReport.Padding = new System.Windows.Forms.Padding(3);
@@ -251,6 +268,78 @@
             this.tpSearchBetTicket.TabIndex = 2;
             this.tpSearchBetTicket.Text = "Search Bet Ticket";
             // 
+            // rtbDisplay
+            // 
+            this.rtbDisplay.Location = new System.Drawing.Point(0, 0);
+            this.rtbDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rtbDisplay.Name = "rtbDisplay";
+            this.rtbDisplay.Size = new System.Drawing.Size(477, 271);
+            this.rtbDisplay.TabIndex = 1;
+            this.rtbDisplay.Text = "";
+            // 
+            // btnShowAllBetRecords
+            // 
+            this.btnShowAllBetRecords.Location = new System.Drawing.Point(274, 330);
+            this.btnShowAllBetRecords.Name = "btnShowAllBetRecords";
+            this.btnShowAllBetRecords.Size = new System.Drawing.Size(183, 39);
+            this.btnShowAllBetRecords.TabIndex = 2;
+            this.btnShowAllBetRecords.Text = "Show All Bet Records";
+            this.btnShowAllBetRecords.UseVisualStyleBackColor = true;
+            // 
+            // btnOrderBetsByDate
+            // 
+            this.btnOrderBetsByDate.Location = new System.Drawing.Point(274, 420);
+            this.btnOrderBetsByDate.Name = "btnOrderBetsByDate";
+            this.btnOrderBetsByDate.Size = new System.Drawing.Size(183, 39);
+            this.btnOrderBetsByDate.TabIndex = 3;
+            this.btnOrderBetsByDate.Text = "Sort Bets By Date";
+            this.btnOrderBetsByDate.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateFileOfRecord
+            // 
+            this.btnCreateFileOfRecord.Location = new System.Drawing.Point(29, 510);
+            this.btnCreateFileOfRecord.Name = "btnCreateFileOfRecord";
+            this.btnCreateFileOfRecord.Size = new System.Drawing.Size(183, 39);
+            this.btnCreateFileOfRecord.TabIndex = 4;
+            this.btnCreateFileOfRecord.Text = "Create File Of Record";
+            this.btnCreateFileOfRecord.UseVisualStyleBackColor = true;
+            // 
+            // btnBetsSuccessRate
+            // 
+            this.btnBetsSuccessRate.Location = new System.Drawing.Point(274, 510);
+            this.btnBetsSuccessRate.Name = "btnBetsSuccessRate";
+            this.btnBetsSuccessRate.Size = new System.Drawing.Size(183, 39);
+            this.btnBetsSuccessRate.TabIndex = 5;
+            this.btnBetsSuccessRate.Text = "Bets Success Rate";
+            this.btnBetsSuccessRate.UseVisualStyleBackColor = true;
+            // 
+            // btnMaxWonLost
+            // 
+            this.btnMaxWonLost.Location = new System.Drawing.Point(274, 465);
+            this.btnMaxWonLost.Name = "btnMaxWonLost";
+            this.btnMaxWonLost.Size = new System.Drawing.Size(183, 39);
+            this.btnMaxWonLost.TabIndex = 6;
+            this.btnMaxWonLost.Text = "Max Won / Lost";
+            this.btnMaxWonLost.UseVisualStyleBackColor = true;
+            // 
+            // btnMostUsedRaceCourse
+            // 
+            this.btnMostUsedRaceCourse.Location = new System.Drawing.Point(274, 375);
+            this.btnMostUsedRaceCourse.Name = "btnMostUsedRaceCourse";
+            this.btnMostUsedRaceCourse.Size = new System.Drawing.Size(183, 39);
+            this.btnMostUsedRaceCourse.TabIndex = 7;
+            this.btnMostUsedRaceCourse.Text = "Favourite Course";
+            this.btnMostUsedRaceCourse.UseVisualStyleBackColor = true;
+            // 
+            // lblDataQueries
+            // 
+            this.lblDataQueries.AutoSize = true;
+            this.lblDataQueries.Location = new System.Drawing.Point(307, 288);
+            this.lblDataQueries.Name = "lblDataQueries";
+            this.lblDataQueries.Size = new System.Drawing.Size(103, 20);
+            this.lblDataQueries.TabIndex = 8;
+            this.lblDataQueries.Text = "Data Queries";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -263,6 +352,8 @@
             this.tbcAddRecord.ResumeLayout(false);
             this.tpAddRecord.ResumeLayout(false);
             this.tpAddRecord.PerformLayout();
+            this.tpShowReport.ResumeLayout(false);
+            this.tpShowReport.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -288,6 +379,14 @@
         private System.Windows.Forms.TextBox txtRacecourseName;
         private System.Windows.Forms.TabPage tpShowReport;
         private System.Windows.Forms.TabPage tpSearchBetTicket;
+        private System.Windows.Forms.Label lblDataQueries;
+        private System.Windows.Forms.Button btnMostUsedRaceCourse;
+        private System.Windows.Forms.Button btnMaxWonLost;
+        private System.Windows.Forms.Button btnBetsSuccessRate;
+        private System.Windows.Forms.Button btnCreateFileOfRecord;
+        private System.Windows.Forms.Button btnOrderBetsByDate;
+        private System.Windows.Forms.Button btnShowAllBetRecords;
+        private System.Windows.Forms.RichTextBox rtbDisplay;
     }
 }
 
