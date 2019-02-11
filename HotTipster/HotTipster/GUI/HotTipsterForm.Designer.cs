@@ -42,28 +42,29 @@
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblRacecourseName = new System.Windows.Forms.Label();
             this.lblBetID = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbcAddRecord = new System.Windows.Forms.TabControl();
+            this.tpAddRecord = new System.Windows.Forms.TabPage();
+            this.tpShowReport = new System.Windows.Forms.TabPage();
             this.txtRacecourseName = new System.Windows.Forms.TextBox();
             this.txtHorseName = new System.Windows.Forms.TextBox();
+            this.tpSearchBetTicket = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tbcAddRecord.SuspendLayout();
+            this.tpAddRecord.SuspendLayout();
             this.SuspendLayout();
             // 
             // picHorseBet
             // 
             this.picHorseBet.Image = ((System.Drawing.Image)(resources.GetObject("picHorseBet.Image")));
-            this.picHorseBet.Location = new System.Drawing.Point(6, 6);
+            this.picHorseBet.Location = new System.Drawing.Point(-1, -2);
             this.picHorseBet.Name = "picHorseBet";
-            this.picHorseBet.Size = new System.Drawing.Size(475, 165);
+            this.picHorseBet.Size = new System.Drawing.Size(487, 172);
             this.picHorseBet.TabIndex = 0;
             this.picHorseBet.TabStop = false;
             // 
             // btnAddBet
             // 
-            this.btnAddBet.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAddBet.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBet.Location = new System.Drawing.Point(199, 488);
             this.btnAddBet.Name = "btnAddBet";
@@ -76,18 +77,17 @@
             // 
             this.txtBetID.Location = new System.Drawing.Point(180, 193);
             this.txtBetID.Name = "txtBetID";
-            this.txtBetID.Size = new System.Drawing.Size(293, 26);
+            this.txtBetID.Size = new System.Drawing.Size(275, 26);
             this.txtBetID.TabIndex = 11;
             // 
             // rdoLose
             // 
             this.rdoLose.AutoSize = true;
             this.rdoLose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoLose.Location = new System.Drawing.Point(352, 434);
+            this.rdoLose.Location = new System.Drawing.Point(352, 438);
             this.rdoLose.Name = "rdoLose";
             this.rdoLose.Size = new System.Drawing.Size(80, 29);
             this.rdoLose.TabIndex = 10;
-            this.rdoLose.TabStop = true;
             this.rdoLose.Text = "Lose";
             this.rdoLose.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +95,7 @@
             // 
             this.txtAmount.Location = new System.Drawing.Point(180, 390);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(293, 26);
+            this.txtAmount.Size = new System.Drawing.Size(275, 26);
             this.txtAmount.TabIndex = 9;
             // 
             // dtpDate
@@ -103,14 +103,15 @@
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Location = new System.Drawing.Point(180, 332);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(293, 30);
+            this.dtpDate.Size = new System.Drawing.Size(275, 30);
             this.dtpDate.TabIndex = 8;
             // 
             // rdoWin
             // 
             this.rdoWin.AutoSize = true;
+            this.rdoWin.Checked = true;
             this.rdoWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoWin.Location = new System.Drawing.Point(219, 434);
+            this.rdoWin.Location = new System.Drawing.Point(199, 434);
             this.rdoWin.Name = "rdoWin";
             this.rdoWin.Size = new System.Drawing.Size(72, 29);
             this.rdoWin.TabIndex = 7;
@@ -178,77 +179,90 @@
             this.lblBetID.TabIndex = 1;
             this.lblBetID.Text = "Bet Ticket ID";
             // 
-            // tabControl1
+            // tbcAddRecord
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(492, 597);
-            this.tabControl1.TabIndex = 2;
+            this.tbcAddRecord.Controls.Add(this.tpAddRecord);
+            this.tbcAddRecord.Controls.Add(this.tpShowReport);
+            this.tbcAddRecord.Controls.Add(this.tpSearchBetTicket);
+            this.tbcAddRecord.Location = new System.Drawing.Point(12, 12);
+            this.tbcAddRecord.Name = "tbcAddRecord";
+            this.tbcAddRecord.SelectedIndex = 0;
+            this.tbcAddRecord.Size = new System.Drawing.Size(485, 597);
+            this.tbcAddRecord.TabIndex = 2;
             // 
-            // tabPage1
+            // tpAddRecord
             // 
-            this.tabPage1.Controls.Add(this.txtHorseName);
-            this.tabPage1.Controls.Add(this.picHorseBet);
-            this.tabPage1.Controls.Add(this.txtRacecourseName);
-            this.tabPage1.Controls.Add(this.lblBetID);
-            this.tabPage1.Controls.Add(this.btnAddBet);
-            this.tabPage1.Controls.Add(this.lblRacecourseName);
-            this.tabPage1.Controls.Add(this.txtBetID);
-            this.tabPage1.Controls.Add(this.lblAmount);
-            this.tabPage1.Controls.Add(this.rdoLose);
-            this.tabPage1.Controls.Add(this.lblDate);
-            this.tabPage1.Controls.Add(this.txtAmount);
-            this.tabPage1.Controls.Add(this.lblHorseName);
-            this.tabPage1.Controls.Add(this.dtpDate);
-            this.tabPage1.Controls.Add(this.lblResult);
-            this.tabPage1.Controls.Add(this.rdoWin);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(484, 564);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpAddRecord.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpAddRecord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tpAddRecord.Controls.Add(this.txtHorseName);
+            this.tpAddRecord.Controls.Add(this.picHorseBet);
+            this.tpAddRecord.Controls.Add(this.txtRacecourseName);
+            this.tpAddRecord.Controls.Add(this.lblBetID);
+            this.tpAddRecord.Controls.Add(this.btnAddBet);
+            this.tpAddRecord.Controls.Add(this.lblRacecourseName);
+            this.tpAddRecord.Controls.Add(this.txtBetID);
+            this.tpAddRecord.Controls.Add(this.lblAmount);
+            this.tpAddRecord.Controls.Add(this.rdoLose);
+            this.tpAddRecord.Controls.Add(this.lblDate);
+            this.tpAddRecord.Controls.Add(this.txtAmount);
+            this.tpAddRecord.Controls.Add(this.lblHorseName);
+            this.tpAddRecord.Controls.Add(this.dtpDate);
+            this.tpAddRecord.Controls.Add(this.lblResult);
+            this.tpAddRecord.Controls.Add(this.rdoWin);
+            this.tpAddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpAddRecord.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.tpAddRecord.Location = new System.Drawing.Point(4, 29);
+            this.tpAddRecord.Name = "tpAddRecord";
+            this.tpAddRecord.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAddRecord.Size = new System.Drawing.Size(477, 564);
+            this.tpAddRecord.TabIndex = 0;
+            this.tpAddRecord.Text = "Add Record";
             // 
-            // tabPage2
+            // tpShowReport
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 67);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tpShowReport.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpShowReport.Location = new System.Drawing.Point(4, 29);
+            this.tpShowReport.Name = "tpShowReport";
+            this.tpShowReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tpShowReport.Size = new System.Drawing.Size(477, 564);
+            this.tpShowReport.TabIndex = 1;
+            this.tpShowReport.Text = "Show Report";
             // 
             // txtRacecourseName
             // 
-            this.txtRacecourseName.Location = new System.Drawing.Point(180, 236);
+            this.txtRacecourseName.Location = new System.Drawing.Point(179, 235);
             this.txtRacecourseName.Name = "txtRacecourseName";
-            this.txtRacecourseName.Size = new System.Drawing.Size(293, 26);
+            this.txtRacecourseName.Size = new System.Drawing.Size(276, 26);
             this.txtRacecourseName.TabIndex = 19;
             // 
             // txtHorseName
             // 
             this.txtHorseName.Location = new System.Drawing.Point(180, 286);
             this.txtHorseName.Name = "txtHorseName";
-            this.txtHorseName.Size = new System.Drawing.Size(293, 26);
+            this.txtHorseName.Size = new System.Drawing.Size(275, 26);
             this.txtHorseName.TabIndex = 20;
+            // 
+            // tpSearchBetTicket
+            // 
+            this.tpSearchBetTicket.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpSearchBetTicket.Location = new System.Drawing.Point(4, 29);
+            this.tpSearchBetTicket.Name = "tpSearchBetTicket";
+            this.tpSearchBetTicket.Size = new System.Drawing.Size(477, 564);
+            this.tpSearchBetTicket.TabIndex = 2;
+            this.tpSearchBetTicket.Text = "Search Bet Ticket";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 618);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(502, 618);
+            this.Controls.Add(this.tbcAddRecord);
             this.Name = "Form1";
             this.Text = "HotTipster";
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tbcAddRecord.ResumeLayout(false);
+            this.tpAddRecord.ResumeLayout(false);
+            this.tpAddRecord.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -268,11 +282,12 @@
         private System.Windows.Forms.RadioButton rdoLose;
         private System.Windows.Forms.TextBox txtBetID;
         private System.Windows.Forms.Button btnAddBet;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tbcAddRecord;
+        private System.Windows.Forms.TabPage tpAddRecord;
         private System.Windows.Forms.TextBox txtHorseName;
         private System.Windows.Forms.TextBox txtRacecourseName;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tpShowReport;
+        private System.Windows.Forms.TabPage tpSearchBetTicket;
     }
 }
 
