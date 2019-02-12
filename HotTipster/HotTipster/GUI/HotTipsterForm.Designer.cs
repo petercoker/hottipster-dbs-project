@@ -56,13 +56,16 @@
             this.btnMaxWonLost = new System.Windows.Forms.Button();
             this.btnMostUsedRaceCourse = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnFindBetTicketID = new System.Windows.Forms.Button();
             this.lblQueries = new System.Windows.Forms.Label();
             this.lblCommands = new System.Windows.Forms.Label();
+            this.lblFindBetTicketID = new System.Windows.Forms.Label();
+            this.txtFindBetID = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tbcAddRecord.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
             this.tpShowReport.SuspendLayout();
+            this.tpSearchBetTicket.SuspendLayout();
             this.SuspendLayout();
             // 
             // picHorseBet
@@ -235,7 +238,6 @@
             this.tpShowReport.BackColor = System.Drawing.Color.LawnGreen;
             this.tpShowReport.Controls.Add(this.lblCommands);
             this.tpShowReport.Controls.Add(this.lblQueries);
-            this.tpShowReport.Controls.Add(this.btnFindBetTicketID);
             this.tpShowReport.Controls.Add(this.button1);
             this.tpShowReport.Controls.Add(this.btnMostUsedRaceCourse);
             this.tpShowReport.Controls.Add(this.btnMaxWonLost);
@@ -268,6 +270,9 @@
             // tpSearchBetTicket
             // 
             this.tpSearchBetTicket.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpSearchBetTicket.Controls.Add(this.richTextBox1);
+            this.tpSearchBetTicket.Controls.Add(this.txtFindBetID);
+            this.tpSearchBetTicket.Controls.Add(this.lblFindBetTicketID);
             this.tpSearchBetTicket.Location = new System.Drawing.Point(4, 29);
             this.tpSearchBetTicket.Name = "tpSearchBetTicket";
             this.tpSearchBetTicket.Size = new System.Drawing.Size(477, 564);
@@ -294,7 +299,7 @@
             // 
             // btnOrderBetsByDate
             // 
-            this.btnOrderBetsByDate.Location = new System.Drawing.Point(258, 510);
+            this.btnOrderBetsByDate.Location = new System.Drawing.Point(258, 454);
             this.btnOrderBetsByDate.Name = "btnOrderBetsByDate";
             this.btnOrderBetsByDate.Size = new System.Drawing.Size(199, 39);
             this.btnOrderBetsByDate.TabIndex = 3;
@@ -330,7 +335,7 @@
             // 
             // btnMostUsedRaceCourse
             // 
-            this.btnMostUsedRaceCourse.Location = new System.Drawing.Point(258, 455);
+            this.btnMostUsedRaceCourse.Location = new System.Drawing.Point(258, 399);
             this.btnMostUsedRaceCourse.Name = "btnMostUsedRaceCourse";
             this.btnMostUsedRaceCourse.Size = new System.Drawing.Size(199, 39);
             this.btnMostUsedRaceCourse.TabIndex = 7;
@@ -346,20 +351,11 @@
             this.button1.Text = "Max Profit/Lose By Year";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnFindBetTicketID
-            // 
-            this.btnFindBetTicketID.Location = new System.Drawing.Point(258, 399);
-            this.btnFindBetTicketID.Name = "btnFindBetTicketID";
-            this.btnFindBetTicketID.Size = new System.Drawing.Size(199, 39);
-            this.btnFindBetTicketID.TabIndex = 10;
-            this.btnFindBetTicketID.Text = "Find Bet Ticket ID";
-            this.btnFindBetTicketID.UseVisualStyleBackColor = true;
-            // 
             // lblQueries
             // 
             this.lblQueries.AutoSize = true;
             this.lblQueries.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQueries.Location = new System.Drawing.Point(315, 303);
+            this.lblQueries.Location = new System.Drawing.Point(309, 303);
             this.lblQueries.Name = "lblQueries";
             this.lblQueries.Size = new System.Drawing.Size(88, 25);
             this.lblQueries.TabIndex = 11;
@@ -375,6 +371,32 @@
             this.lblCommands.TabIndex = 12;
             this.lblCommands.Text = "Commands";
             // 
+            // lblFindBetTicketID
+            // 
+            this.lblFindBetTicketID.AutoSize = true;
+            this.lblFindBetTicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFindBetTicketID.Location = new System.Drawing.Point(3, 306);
+            this.lblFindBetTicketID.Name = "lblFindBetTicketID";
+            this.lblFindBetTicketID.Size = new System.Drawing.Size(193, 25);
+            this.lblFindBetTicketID.TabIndex = 0;
+            this.lblFindBetTicketID.Text = "Enter Bet Ticket ID";
+            // 
+            // txtFindBetID
+            // 
+            this.txtFindBetID.Location = new System.Drawing.Point(205, 306);
+            this.txtFindBetID.Name = "txtFindBetID";
+            this.txtFindBetID.Size = new System.Drawing.Size(257, 26);
+            this.txtFindBetID.TabIndex = 1;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(477, 271);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -389,6 +411,8 @@
             this.tpAddRecord.PerformLayout();
             this.tpShowReport.ResumeLayout(false);
             this.tpShowReport.PerformLayout();
+            this.tpSearchBetTicket.ResumeLayout(false);
+            this.tpSearchBetTicket.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -424,7 +448,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblCommands;
         private System.Windows.Forms.Label lblQueries;
-        private System.Windows.Forms.Button btnFindBetTicketID;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtFindBetID;
+        private System.Windows.Forms.Label lblFindBetTicketID;
     }
 }
 
