@@ -328,6 +328,7 @@
             this.btnBetsSuccessRate.TabIndex = 5;
             this.btnBetsSuccessRate.Text = "Bets Success Rate";
             this.btnBetsSuccessRate.UseVisualStyleBackColor = true;
+            this.btnBetsSuccessRate.Click += new System.EventHandler(this.btnBetsSuccessRate_Click);
             // 
             // btnCreateFileOfRecord
             // 

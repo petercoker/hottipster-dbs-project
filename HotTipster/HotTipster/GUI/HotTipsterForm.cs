@@ -160,5 +160,19 @@ namespace HotTipster
                 MessageBox.Show(exception.Message);
             }
         }
+
+        private void btnBetsSuccessRate_Click(object sender, EventArgs e)
+        {
+            var horseBetRecord = "";
+
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWonAndLost(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }
