@@ -277,7 +277,7 @@
             // 
             // btnMaxBetWon
             // 
-            this.btnMaxBetWon.Location = new System.Drawing.Point(29, 344);
+            this.btnMaxBetWon.Location = new System.Drawing.Point(29, 399);
             this.btnMaxBetWon.Name = "btnMaxBetWon";
             this.btnMaxBetWon.Size = new System.Drawing.Size(199, 39);
             this.btnMaxBetWon.TabIndex = 15;
@@ -309,7 +309,7 @@
             // 
             this.lblDataAnalysis.AutoSize = true;
             this.lblDataAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataAnalysis.Location = new System.Drawing.Point(61, 226);
+            this.lblDataAnalysis.Location = new System.Drawing.Point(56, 242);
             this.lblDataAnalysis.Name = "lblDataAnalysis";
             this.lblDataAnalysis.Size = new System.Drawing.Size(145, 25);
             this.lblDataAnalysis.TabIndex = 12;
@@ -319,7 +319,7 @@
             // 
             this.lblQueries.AutoSize = true;
             this.lblQueries.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQueries.Location = new System.Drawing.Point(311, 226);
+            this.lblQueries.Location = new System.Drawing.Point(319, 242);
             this.lblQueries.Name = "lblQueries";
             this.lblQueries.Size = new System.Drawing.Size(88, 25);
             this.lblQueries.TabIndex = 11;
@@ -347,7 +347,7 @@
             // 
             // btnMaxBetWonLost
             // 
-            this.btnMaxBetWonLost.Location = new System.Drawing.Point(29, 299);
+            this.btnMaxBetWonLost.Location = new System.Drawing.Point(29, 343);
             this.btnMaxBetWonLost.Name = "btnMaxBetWonLost";
             this.btnMaxBetWonLost.Size = new System.Drawing.Size(199, 39);
             this.btnMaxBetWonLost.TabIndex = 6;
@@ -357,7 +357,7 @@
             // 
             // btnBetsSuccessRate
             // 
-            this.btnBetsSuccessRate.Location = new System.Drawing.Point(29, 254);
+            this.btnBetsSuccessRate.Location = new System.Drawing.Point(29, 285);
             this.btnBetsSuccessRate.Name = "btnBetsSuccessRate";
             this.btnBetsSuccessRate.Size = new System.Drawing.Size(199, 39);
             this.btnBetsSuccessRate.TabIndex = 5;
@@ -367,7 +367,7 @@
             // 
             // btnCreateFileOfRecord
             // 
-            this.btnCreateFileOfRecord.Location = new System.Drawing.Point(258, 254);
+            this.btnCreateFileOfRecord.Location = new System.Drawing.Point(258, 285);
             this.btnCreateFileOfRecord.Name = "btnCreateFileOfRecord";
             this.btnCreateFileOfRecord.Size = new System.Drawing.Size(199, 39);
             this.btnCreateFileOfRecord.TabIndex = 4;
@@ -387,7 +387,7 @@
             // 
             // btnShowAllBetRecords
             // 
-            this.btnShowAllBetRecords.Location = new System.Drawing.Point(258, 299);
+            this.btnShowAllBetRecords.Location = new System.Drawing.Point(258, 343);
             this.btnShowAllBetRecords.Name = "btnShowAllBetRecords";
             this.btnShowAllBetRecords.Size = new System.Drawing.Size(199, 39);
             this.btnShowAllBetRecords.TabIndex = 2;
@@ -400,7 +400,7 @@
             this.rtbDisplay.Location = new System.Drawing.Point(0, 0);
             this.rtbDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtbDisplay.Name = "rtbDisplay";
-            this.rtbDisplay.Size = new System.Drawing.Size(477, 208);
+            this.rtbDisplay.Size = new System.Drawing.Size(477, 223);
             this.rtbDisplay.TabIndex = 1;
             this.rtbDisplay.Text = "";
             // 
@@ -419,18 +419,18 @@
             // 
             // rtbDisplay2
             // 
-            this.rtbDisplay2.Location = new System.Drawing.Point(0, 0);
+            this.rtbDisplay2.Location = new System.Drawing.Point(-4, 96);
             this.rtbDisplay2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtbDisplay2.Name = "rtbDisplay2";
-            this.rtbDisplay2.Size = new System.Drawing.Size(477, 293);
+            this.rtbDisplay2.Size = new System.Drawing.Size(502, 472);
             this.rtbDisplay2.TabIndex = 2;
             this.rtbDisplay2.Text = "";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(163, 367);
+            this.btnSearch.Location = new System.Drawing.Point(355, 39);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(138, 81);
+            this.btnSearch.Size = new System.Drawing.Size(110, 49);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -438,16 +438,16 @@
             // 
             // txtBetIDNumber
             // 
-            this.txtBetIDNumber.Location = new System.Drawing.Point(255, 322);
+            this.txtBetIDNumber.Location = new System.Drawing.Point(218, 52);
             this.txtBetIDNumber.Name = "txtBetIDNumber";
-            this.txtBetIDNumber.Size = new System.Drawing.Size(185, 26);
+            this.txtBetIDNumber.Size = new System.Drawing.Size(115, 26);
             this.txtBetIDNumber.TabIndex = 5;
             // 
             // lblEnterBetIDNumber
             // 
             this.lblEnterBetIDNumber.AutoSize = true;
             this.lblEnterBetIDNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnterBetIDNumber.Location = new System.Drawing.Point(14, 323);
+            this.lblEnterBetIDNumber.Location = new System.Drawing.Point(3, 51);
             this.lblEnterBetIDNumber.Name = "lblEnterBetIDNumber";
             this.lblEnterBetIDNumber.Size = new System.Drawing.Size(209, 25);
             this.lblEnterBetIDNumber.TabIndex = 6;
