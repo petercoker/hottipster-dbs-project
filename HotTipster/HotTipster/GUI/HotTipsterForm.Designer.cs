@@ -87,6 +87,7 @@
             this.btnAddBet.TabIndex = 18;
             this.btnAddBet.Text = "Add Bet";
             this.btnAddBet.UseVisualStyleBackColor = false;
+            this.btnAddBet.Click += new System.EventHandler(this.btnAddBet_Click);
             // 
             // txtBetID
             // 
