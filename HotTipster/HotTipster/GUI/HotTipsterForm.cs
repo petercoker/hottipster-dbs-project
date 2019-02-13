@@ -132,7 +132,7 @@ namespace HotTipster
                 MessageBox.Show(exception.Message);
             }
         }
-
+        
         private void btnMostUsedRaceCourse_Click(object sender, EventArgs e)
         {
             var horseBetRecord = "";
@@ -203,5 +203,7 @@ namespace HotTipster
             }
 
         }
+
+        
     }
 }

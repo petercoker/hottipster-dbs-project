@@ -157,6 +157,7 @@ namespace HotTipster.BusinessLogic
         }
         #endregion
 
+        //Used all function in form
         #region FilterByRacecourseName
 
         public string GetMostPopularRacecourseBets(string hourseBetRecord)
@@ -173,6 +174,7 @@ namespace HotTipster.BusinessLogic
         }
         #endregion
 
+        //Used all function in form
         #region FilterByHorseName
 
         public string GetMostPopularHorse(string hourseBetRecord)
@@ -190,6 +192,7 @@ namespace HotTipster.BusinessLogic
 
         #endregion
 
+        //Used all function in form
         #region FilterByDate
 
         //Not used in form
@@ -247,6 +250,7 @@ namespace HotTipster.BusinessLogic
         }
 
         #endregion
+
         //Used all function in form
         #region FilterByAmount
         //Get highest amount won for a bet laid and the most lost for a bet laid.

@@ -62,8 +62,8 @@
             this.rtbDisplay = new System.Windows.Forms.RichTextBox();
             this.tpSearchBetTicket = new System.Windows.Forms.TabPage();
             this.rtbDisplay2 = new System.Windows.Forms.RichTextBox();
-            this.txtFindBetID = new System.Windows.Forms.TextBox();
-            this.lblFindBetTicketID = new System.Windows.Forms.Label();
+            this.mtxtFindBetID = new System.Windows.Forms.MaskedTextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tbcAddRecord.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
@@ -406,9 +406,9 @@
             // tpSearchBetTicket
             // 
             this.tpSearchBetTicket.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpSearchBetTicket.Controls.Add(this.btnSearch);
+            this.tpSearchBetTicket.Controls.Add(this.mtxtFindBetID);
             this.tpSearchBetTicket.Controls.Add(this.rtbDisplay2);
-            this.tpSearchBetTicket.Controls.Add(this.txtFindBetID);
-            this.tpSearchBetTicket.Controls.Add(this.lblFindBetTicketID);
             this.tpSearchBetTicket.Location = new System.Drawing.Point(4, 29);
             this.tpSearchBetTicket.Name = "tpSearchBetTicket";
             this.tpSearchBetTicket.Size = new System.Drawing.Size(477, 564);
@@ -420,26 +420,26 @@
             this.rtbDisplay2.Location = new System.Drawing.Point(0, 0);
             this.rtbDisplay2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtbDisplay2.Name = "rtbDisplay2";
-            this.rtbDisplay2.Size = new System.Drawing.Size(477, 271);
+            this.rtbDisplay2.Size = new System.Drawing.Size(477, 293);
             this.rtbDisplay2.TabIndex = 2;
             this.rtbDisplay2.Text = "";
             // 
-            // txtFindBetID
+            // mtxtFindBetID
             // 
-            this.txtFindBetID.Location = new System.Drawing.Point(205, 306);
-            this.txtFindBetID.Name = "txtFindBetID";
-            this.txtFindBetID.Size = new System.Drawing.Size(257, 26);
-            this.txtFindBetID.TabIndex = 1;
+            this.mtxtFindBetID.Location = new System.Drawing.Point(102, 321);
+            this.mtxtFindBetID.Mask = "Enter Ticket ID number to find ticket";
+            this.mtxtFindBetID.Name = "mtxtFindBetID";
+            this.mtxtFindBetID.Size = new System.Drawing.Size(265, 26);
+            this.mtxtFindBetID.TabIndex = 3;
             // 
-            // lblFindBetTicketID
+            // btnSearch
             // 
-            this.lblFindBetTicketID.AutoSize = true;
-            this.lblFindBetTicketID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFindBetTicketID.Location = new System.Drawing.Point(3, 306);
-            this.lblFindBetTicketID.Name = "lblFindBetTicketID";
-            this.lblFindBetTicketID.Size = new System.Drawing.Size(193, 25);
-            this.lblFindBetTicketID.TabIndex = 0;
-            this.lblFindBetTicketID.Text = "Enter Bet Ticket ID";
+            this.btnSearch.Location = new System.Drawing.Point(163, 367);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(138, 81);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -493,11 +493,11 @@
         private System.Windows.Forms.Label lblDataAnalysis;
         private System.Windows.Forms.Label lblQueries;
         private System.Windows.Forms.RichTextBox rtbDisplay2;
-        private System.Windows.Forms.TextBox txtFindBetID;
-        private System.Windows.Forms.Label lblFindBetTicketID;
         private System.Windows.Forms.Button btnFavouriteHorse;
         private System.Windows.Forms.Button btnMaxBetWon;
         private System.Windows.Forms.Button btnMaxBetLost;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.MaskedTextBox mtxtFindBetID;
     }
 }
 
