@@ -189,7 +189,7 @@ namespace HotTipster
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMaxBetLost_Click(object sender, EventArgs e)
         {
             var horseBetRecord = "";
 
@@ -201,6 +201,7 @@ namespace HotTipster
             {
                 MessageBox.Show(exception.Message);
             }
+
         }
     }
 }
