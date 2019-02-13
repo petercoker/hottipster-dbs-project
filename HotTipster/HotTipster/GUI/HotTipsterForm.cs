@@ -133,7 +133,32 @@ namespace HotTipster
             }
         }
 
+        private void btnMostUsedRaceCourse_Click(object sender, EventArgs e)
+        {
+            var horseBetRecord = "";
 
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.GetMostPopularRacecourseBets(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
 
+        private void btnFavouriteHorse_Click(object sender, EventArgs e)
+        {
+            var horseBetRecord = "";
+
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.GetMostPopularHorse(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }

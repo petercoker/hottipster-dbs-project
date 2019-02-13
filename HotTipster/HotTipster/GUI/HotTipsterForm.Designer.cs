@@ -61,6 +61,7 @@
             this.rtbDisplay2 = new System.Windows.Forms.RichTextBox();
             this.txtFindBetID = new System.Windows.Forms.TextBox();
             this.lblFindBetTicketID = new System.Windows.Forms.Label();
+            this.btnFavouriteHorse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tbcAddRecord.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
@@ -251,6 +252,7 @@
             // tpShowReport
             // 
             this.tpShowReport.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpShowReport.Controls.Add(this.btnFavouriteHorse);
             this.tpShowReport.Controls.Add(this.lblCommands);
             this.tpShowReport.Controls.Add(this.lblQueries);
             this.tpShowReport.Controls.Add(this.btnMaxProfitLoseByYear);
@@ -306,6 +308,7 @@
             this.btnMostUsedRaceCourse.TabIndex = 7;
             this.btnMostUsedRaceCourse.Text = "Favourite Course";
             this.btnMostUsedRaceCourse.UseVisualStyleBackColor = true;
+            this.btnMostUsedRaceCourse.Click += new System.EventHandler(this.btnMostUsedRaceCourse_Click);
             // 
             // btnMaxBetWonLost
             // 
@@ -338,7 +341,7 @@
             // 
             // btnOrderBetsByDate
             // 
-            this.btnOrderBetsByDate.Location = new System.Drawing.Point(258, 454);
+            this.btnOrderBetsByDate.Location = new System.Drawing.Point(258, 510);
             this.btnOrderBetsByDate.Name = "btnOrderBetsByDate";
             this.btnOrderBetsByDate.Size = new System.Drawing.Size(199, 39);
             this.btnOrderBetsByDate.TabIndex = 3;
@@ -403,6 +406,16 @@
             this.lblFindBetTicketID.TabIndex = 0;
             this.lblFindBetTicketID.Text = "Enter Bet Ticket ID";
             // 
+            // btnFavouriteHorse
+            // 
+            this.btnFavouriteHorse.Location = new System.Drawing.Point(258, 455);
+            this.btnFavouriteHorse.Name = "btnFavouriteHorse";
+            this.btnFavouriteHorse.Size = new System.Drawing.Size(199, 39);
+            this.btnFavouriteHorse.TabIndex = 13;
+            this.btnFavouriteHorse.Text = "Favourite Horse";
+            this.btnFavouriteHorse.UseVisualStyleBackColor = true;
+            this.btnFavouriteHorse.Click += new System.EventHandler(this.btnFavouriteHorse_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -457,6 +470,7 @@
         private System.Windows.Forms.RichTextBox rtbDisplay2;
         private System.Windows.Forms.TextBox txtFindBetID;
         private System.Windows.Forms.Label lblFindBetTicketID;
+        private System.Windows.Forms.Button btnFavouriteHorse;
     }
 }
 
