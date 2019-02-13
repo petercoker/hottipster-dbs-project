@@ -66,11 +66,11 @@ namespace HotTipster
 
         private void btnShowAllBetRecords_Click(object sender, EventArgs e)
         {
-            var result = "";
+            var horseBetRecord = "";
 
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(result);
+                rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(horseBetRecord);
             }
             catch (Exception exception)
             {
@@ -81,10 +81,10 @@ namespace HotTipster
         private void btnOrderBetsByDate_Click(object sender, EventArgs e)
         {
             rtbDisplay.ResetText();
-            var result = "";
+            var horseBetRecord = "";
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.ShowBetsByDate(result);
+                rtbDisplay.Text = hotTipsterMethods.ShowBetsByDate(horseBetRecord);
             }
             catch (Exception exception)
             {
@@ -104,6 +104,35 @@ namespace HotTipster
                 MessageBox.Show(exception.Message);
             }
         }
+
+        private void btnMaxProfitLoseByYear_Click(object sender, EventArgs e)
+        {
+            txtRacecourseName.Clear();
+            var horseBetRecord = "";
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.ShowTotalWonAndLostBetsByYear(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btnMaxBetWonLost_Click(object sender, EventArgs e)
+        {
+            var horseBetRecord = "";
+
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWonAndLost(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
 
 
     }
