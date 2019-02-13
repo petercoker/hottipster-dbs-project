@@ -204,6 +204,19 @@ namespace HotTipster
 
         }
 
-        
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var betID = int.Parse(txtBetIDNumber.Text);
+
+            try
+            {
+                rtbDisplay2.Text = hotTipsterMethods.GetHorseBetID(betID);
+                txtBetIDNumber.Clear();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }
