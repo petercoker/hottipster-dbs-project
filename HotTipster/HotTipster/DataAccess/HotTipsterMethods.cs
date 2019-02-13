@@ -247,7 +247,7 @@ namespace HotTipster.BusinessLogic
         }
 
         #endregion
-
+        //Used all function in form
         #region FilterByAmount
         //Get highest amount won for a bet laid and the most lost for a bet laid.
         //Not used in form yet
@@ -262,7 +262,6 @@ namespace HotTipster.BusinessLogic
             return horseBetRecord;
         }
 
-        //Not used in form yet
         public string GetMostAmountLost(string horseBetRecord)
         {
             var horseBets = GetAllBetRecordData();

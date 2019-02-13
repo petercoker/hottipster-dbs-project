@@ -47,7 +47,7 @@
             this.txtHorseName = new System.Windows.Forms.TextBox();
             this.txtRacecourseName = new System.Windows.Forms.TextBox();
             this.tpShowReport = new System.Windows.Forms.TabPage();
-            this.lblCommands = new System.Windows.Forms.Label();
+            this.lblDataAnalysis = new System.Windows.Forms.Label();
             this.lblQueries = new System.Windows.Forms.Label();
             this.btnMaxProfitLoseByYear = new System.Windows.Forms.Button();
             this.btnMostUsedRaceCourse = new System.Windows.Forms.Button();
@@ -62,6 +62,8 @@
             this.txtFindBetID = new System.Windows.Forms.TextBox();
             this.lblFindBetTicketID = new System.Windows.Forms.Label();
             this.btnFavouriteHorse = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnMaxBetWon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tbcAddRecord.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
@@ -252,8 +254,10 @@
             // tpShowReport
             // 
             this.tpShowReport.BackColor = System.Drawing.Color.LawnGreen;
+            this.tpShowReport.Controls.Add(this.btnMaxBetWon);
+            this.tpShowReport.Controls.Add(this.button1);
             this.tpShowReport.Controls.Add(this.btnFavouriteHorse);
-            this.tpShowReport.Controls.Add(this.lblCommands);
+            this.tpShowReport.Controls.Add(this.lblDataAnalysis);
             this.tpShowReport.Controls.Add(this.lblQueries);
             this.tpShowReport.Controls.Add(this.btnMaxProfitLoseByYear);
             this.tpShowReport.Controls.Add(this.btnMostUsedRaceCourse);
@@ -270,21 +274,21 @@
             this.tpShowReport.TabIndex = 1;
             this.tpShowReport.Text = "Show Report";
             // 
-            // lblCommands
+            // lblDataAnalysis
             // 
-            this.lblCommands.AutoSize = true;
-            this.lblCommands.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCommands.Location = new System.Drawing.Point(77, 303);
-            this.lblCommands.Name = "lblCommands";
-            this.lblCommands.Size = new System.Drawing.Size(121, 25);
-            this.lblCommands.TabIndex = 12;
-            this.lblCommands.Text = "Commands";
+            this.lblDataAnalysis.AutoSize = true;
+            this.lblDataAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataAnalysis.Location = new System.Drawing.Point(61, 226);
+            this.lblDataAnalysis.Name = "lblDataAnalysis";
+            this.lblDataAnalysis.Size = new System.Drawing.Size(145, 25);
+            this.lblDataAnalysis.TabIndex = 12;
+            this.lblDataAnalysis.Text = "Data Analysis";
             // 
             // lblQueries
             // 
             this.lblQueries.AutoSize = true;
             this.lblQueries.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQueries.Location = new System.Drawing.Point(309, 303);
+            this.lblQueries.Location = new System.Drawing.Point(311, 226);
             this.lblQueries.Name = "lblQueries";
             this.lblQueries.Size = new System.Drawing.Size(88, 25);
             this.lblQueries.TabIndex = 11;
@@ -292,7 +296,7 @@
             // 
             // btnMaxProfitLoseByYear
             // 
-            this.btnMaxProfitLoseByYear.Location = new System.Drawing.Point(29, 455);
+            this.btnMaxProfitLoseByYear.Location = new System.Drawing.Point(29, 510);
             this.btnMaxProfitLoseByYear.Name = "btnMaxProfitLoseByYear";
             this.btnMaxProfitLoseByYear.Size = new System.Drawing.Size(199, 39);
             this.btnMaxProfitLoseByYear.TabIndex = 9;
@@ -312,7 +316,7 @@
             // 
             // btnMaxBetWonLost
             // 
-            this.btnMaxBetWonLost.Location = new System.Drawing.Point(29, 399);
+            this.btnMaxBetWonLost.Location = new System.Drawing.Point(29, 299);
             this.btnMaxBetWonLost.Name = "btnMaxBetWonLost";
             this.btnMaxBetWonLost.Size = new System.Drawing.Size(199, 39);
             this.btnMaxBetWonLost.TabIndex = 6;
@@ -322,7 +326,7 @@
             // 
             // btnBetsSuccessRate
             // 
-            this.btnBetsSuccessRate.Location = new System.Drawing.Point(29, 345);
+            this.btnBetsSuccessRate.Location = new System.Drawing.Point(29, 254);
             this.btnBetsSuccessRate.Name = "btnBetsSuccessRate";
             this.btnBetsSuccessRate.Size = new System.Drawing.Size(199, 39);
             this.btnBetsSuccessRate.TabIndex = 5;
@@ -332,7 +336,7 @@
             // 
             // btnCreateFileOfRecord
             // 
-            this.btnCreateFileOfRecord.Location = new System.Drawing.Point(29, 510);
+            this.btnCreateFileOfRecord.Location = new System.Drawing.Point(258, 254);
             this.btnCreateFileOfRecord.Name = "btnCreateFileOfRecord";
             this.btnCreateFileOfRecord.Size = new System.Drawing.Size(199, 39);
             this.btnCreateFileOfRecord.TabIndex = 4;
@@ -352,7 +356,7 @@
             // 
             // btnShowAllBetRecords
             // 
-            this.btnShowAllBetRecords.Location = new System.Drawing.Point(258, 345);
+            this.btnShowAllBetRecords.Location = new System.Drawing.Point(258, 299);
             this.btnShowAllBetRecords.Name = "btnShowAllBetRecords";
             this.btnShowAllBetRecords.Size = new System.Drawing.Size(199, 39);
             this.btnShowAllBetRecords.TabIndex = 2;
@@ -365,7 +369,7 @@
             this.rtbDisplay.Location = new System.Drawing.Point(0, 0);
             this.rtbDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtbDisplay.Name = "rtbDisplay";
-            this.rtbDisplay.Size = new System.Drawing.Size(477, 271);
+            this.rtbDisplay.Size = new System.Drawing.Size(477, 208);
             this.rtbDisplay.TabIndex = 1;
             this.rtbDisplay.Text = "";
             // 
@@ -417,6 +421,26 @@
             this.btnFavouriteHorse.UseVisualStyleBackColor = true;
             this.btnFavouriteHorse.Click += new System.EventHandler(this.btnFavouriteHorse_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(29, 455);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 39);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Max Bet Lost";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnMaxBetWon
+            // 
+            this.btnMaxBetWon.Location = new System.Drawing.Point(29, 344);
+            this.btnMaxBetWon.Name = "btnMaxBetWon";
+            this.btnMaxBetWon.Size = new System.Drawing.Size(199, 39);
+            this.btnMaxBetWon.TabIndex = 15;
+            this.btnMaxBetWon.Text = "Max Bet Won";
+            this.btnMaxBetWon.UseVisualStyleBackColor = true;
+            this.btnMaxBetWon.Click += new System.EventHandler(this.btnMaxBetWon_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -466,12 +490,14 @@
         private System.Windows.Forms.Button btnShowAllBetRecords;
         private System.Windows.Forms.RichTextBox rtbDisplay;
         private System.Windows.Forms.Button btnMaxProfitLoseByYear;
-        private System.Windows.Forms.Label lblCommands;
+        private System.Windows.Forms.Label lblDataAnalysis;
         private System.Windows.Forms.Label lblQueries;
         private System.Windows.Forms.RichTextBox rtbDisplay2;
         private System.Windows.Forms.TextBox txtFindBetID;
         private System.Windows.Forms.Label lblFindBetTicketID;
         private System.Windows.Forms.Button btnFavouriteHorse;
+        private System.Windows.Forms.Button btnMaxBetWon;
+        private System.Windows.Forms.Button button1;
     }
 }
 

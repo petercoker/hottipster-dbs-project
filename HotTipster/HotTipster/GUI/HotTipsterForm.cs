@@ -175,6 +175,32 @@ namespace HotTipster
             }
         }
 
+        private void btnMaxBetWon_Click(object sender, EventArgs e)
+        {
+            var horseBetRecord = "";
 
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWon(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var horseBetRecord = "";
+
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.GetMostAmountLost(horseBetRecord);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }
