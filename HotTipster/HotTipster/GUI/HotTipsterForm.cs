@@ -174,5 +174,7 @@ namespace HotTipster
                 MessageBox.Show(exception.Message);
             }
         }
+
+
     }
 }
