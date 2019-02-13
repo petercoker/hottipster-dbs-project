@@ -332,6 +332,7 @@
             this.btnCreateFileOfRecord.TabIndex = 4;
             this.btnCreateFileOfRecord.Text = "Create File Of Record";
             this.btnCreateFileOfRecord.UseVisualStyleBackColor = true;
+            this.btnCreateFileOfRecord.Click += new System.EventHandler(this.btnCreateFileOfRecord_Click);
             // 
             // btnOrderBetsByDate
             // 
@@ -341,6 +342,7 @@
             this.btnOrderBetsByDate.TabIndex = 3;
             this.btnOrderBetsByDate.Text = "Sort Bets By Date";
             this.btnOrderBetsByDate.UseVisualStyleBackColor = true;
+            this.btnOrderBetsByDate.Click += new System.EventHandler(this.btnOrderBetsByDate_Click);
             // 
             // btnShowAllBetRecords
             // 
@@ -350,6 +352,7 @@
             this.btnShowAllBetRecords.TabIndex = 2;
             this.btnShowAllBetRecords.Text = "Show All Bet Records";
             this.btnShowAllBetRecords.UseVisualStyleBackColor = true;
+            this.btnShowAllBetRecords.Click += new System.EventHandler(this.btnShowAllBetRecords_Click);
             // 
             // rtbDisplay
             // 

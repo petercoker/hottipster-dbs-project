@@ -64,7 +64,47 @@ namespace HotTipster
             }
         }
 
-        
+        private void btnShowAllBetRecords_Click(object sender, EventArgs e)
+        {
+            var result = "";
+
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(result);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btnOrderBetsByDate_Click(object sender, EventArgs e)
+        {
+            rtbDisplay.ResetText();
+            var result = "";
+            try
+            {
+                rtbDisplay.Text = hotTipsterMethods.ShowBetsByDate(result);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btnCreateFileOfRecord_Click(object sender, EventArgs e)
+        {
+            btnCreateFileOfRecord.Enabled = false;
+            try
+            {
+                hotTipsterMethods.WriteToFile();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
 
     }
 }
