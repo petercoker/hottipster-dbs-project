@@ -167,7 +167,7 @@ namespace HotTipster
 
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWonAndLost(horseBetRecord);
+                rtbDisplay.Text = hotTipsterMethods.GetTotalNumberOfRacesAndWins(horseBetRecord);
             }
             catch (Exception exception)
             {

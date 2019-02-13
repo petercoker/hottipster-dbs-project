@@ -61,8 +61,9 @@ namespace HotTipster.BusinessLogic
 
         #endregion
 
-        #region GeneralViewAll
+        #region GeneralViewAll 
         
+        //checkout
         public List<HorseBet> GetAllBetRecordData()
         {
            var horseBet = new HorseBet();
@@ -191,6 +192,7 @@ namespace HotTipster.BusinessLogic
 
         #region FilterByDate
 
+        //Not used in form
         public string ShowBetsByDate(string horseBetRecord)
         {
             var horseBets = GetAllBetRecordData();
@@ -205,7 +207,7 @@ namespace HotTipster.BusinessLogic
 
             return horseBetRecord;
         }
-
+        
         public string ShowTotalWonAndLostBetsByYear(string hourseBetRecord)
         {
             var horseBets = GetAllBetRecordData();
@@ -248,6 +250,7 @@ namespace HotTipster.BusinessLogic
 
         #region FilterByAmount
         //Get highest amount won for a bet laid and the most lost for a bet laid.
+        //Not used in form yet
         public string GetHighestAmountWon(string horseBetRecord)
         {
             var horseBets = GetAllBetRecordData();
@@ -259,6 +262,7 @@ namespace HotTipster.BusinessLogic
             return horseBetRecord;
         }
 
+        //Not used in form yet
         public string GetMostAmountLost(string horseBetRecord)
         {
             var horseBets = GetAllBetRecordData();
@@ -286,6 +290,7 @@ namespace HotTipster.BusinessLogic
 
         #endregion
 
+        //Used all function in form
         #region FilterByResult
 
         //total number of races alongside the number of races that HotTipster has won a bet on
