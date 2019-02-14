@@ -17,7 +17,7 @@ namespace HotTipster.BusinessLogic
         
         #region FileInputAndOutput
         
-        public void WriteToFile() //Test method
+        public void WriteToTextFile() //Test method
         {
             var horseBets = BetRecords.LoadRoads();
             foreach (var horseBet in horseBets)
@@ -28,7 +28,7 @@ namespace HotTipster.BusinessLogic
                 {
                     var bet = new HorseBet(horseBet.BetID, horseBet.RacecourseName,
                     horseBet.HorseName, horseBet.Date, horseBet.Amount, horseBet.Result);
-                    binaryWriter.Write(Environment.NewLine + horseBet.BetID.ToString());
+                    binaryWriter.Write(Environment.NewLine + horseBet.BetID);//.ToString());
                     binaryWriter.Write(bet.RacecourseName);
                     binaryWriter.Write(bet.HorseName);
                     binaryWriter.Write(bet.Date.ToString());
@@ -49,7 +49,7 @@ namespace HotTipster.BusinessLogic
                 using (var binaryWriter = new BinaryWriter(fileStream))
                 {
                     var bet = new HorseBet(betID, racecourseName, horseName, date, amount, result);
-                    binaryWriter.Write(Environment.NewLine + bet.BetID.ToString());
+                    binaryWriter.Write(Environment.NewLine + bet.BetID);//.ToString());
                     binaryWriter.Write(bet.RacecourseName);
                     binaryWriter.Write(bet.HorseName);
                     binaryWriter.Write(bet.Date.ToString());
@@ -218,10 +218,6 @@ namespace HotTipster.BusinessLogic
             decimal totalWon2017 = 0;
             decimal totalLost2016 = 0;
             decimal totalLost2017 = 0;
-            decimal totalWon2018 = 0;
-            decimal totalLost2018 = 0;
-            decimal totalWon2019 = 0;
-            decimal totalLost2019 = 0;
 
             totalWon2016 = horseBets.Where(money => money.Date.Year == 2016 && money.Result == true)
                 .Sum(money => money.Amount);
@@ -231,20 +227,10 @@ namespace HotTipster.BusinessLogic
                 .Sum(money => money.Amount);
             totalLost2017 = horseBets.Where(money => money.Date.Year == 2017 && money.Result == false)
                 .Sum(money => money.Amount);
-            totalWon2018 = horseBets.Where(money => money.Date.Year == 2018 && money.Result == true)
-                .Sum(money => money.Amount);
-            totalLost2018 = horseBets.Where(money => money.Date.Year == 2018 && money.Result == false)
-                .Sum(money => money.Amount);
-            totalWon2019 = horseBets.Where(money => money.Date.Year == 2019 && money.Result == true)
-                .Sum(money => money.Amount);
-            totalLost2019 = horseBets.Where(money => money.Date.Year == 2019 && money.Result == false)
-                .Sum(money => money.Amount);
 
             hourseBetRecord =   $"Year\tTotal Won\tTotal Lost " + Environment.NewLine 
                               + $"2016\t€{totalWon2016}\t{totalLost2016}" + Environment.NewLine
-                              + $"2017\t€{totalWon2017}\t{totalLost2017}" + Environment.NewLine
-                              + $"2018\t€{totalWon2018}\t{totalLost2018}" + Environment.NewLine
-                              + $"2019\t€{totalWon2019}\t{totalLost2019}" + Environment.NewLine;
+                              + $"2017\t€{totalWon2017}\t{totalLost2017}" + Environment.NewLine;
 
             return hourseBetRecord;
         }

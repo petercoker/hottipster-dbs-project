@@ -1,82 +1,0 @@
-
-21233adfadf3456613/02/2019 14:51:414565False
-1AintreeCheetah12/05/2017 00:00:0011.58True
-2PunchestownThunder22/12/2016 00:00:00122.52True
-3SandownFlash17/11/2016 00:00:0020.00False
-4AyrBloat03/11/2016 00:00:0025.00False
-5
-FairyhouseQuicksilver02/12/2016 00:00:0065.75True
-6Ayr	Lightning11/03/2017 00:00:0012.05True
-7	Doncaster	QuickFeet02/12/2017 00:00:0010.00False
-8	TowcesterSpeedee12/03/2016 00:00:0050.00False
-9GoodwoodZeus07/10/2017 00:00:00525.74True
-10Kelso	President13/09/2016 00:00:0043.21True
-11PunchestownSheriff05/07/2017 00:00:0035.00False
-12AscotDeputy04/02/2016 00:00:0023.65True
-13KelsoLucky02/08/2017 00:00:0030.00False
-14	TowcesterPablo01/05/2017 00:00:00104.33True
-14Ascot	Horseshoe21/06/2017 00:00:0025.00False
-15BangorBarley22/12/2016 00:00:0030.00False
-16AyrBronco22/05/2017 00:00:0011.50True
-17AscotBlazer23/06/2017 00:00:0030.00False
-18AscotWilbur23/06/2017 00:00:00374.27True
-19GoodwoodBuck05/10/2016 00:00:0034.12True
-20DundalkFranklin09/11/2016 00:00:0020.00False
-21HaydockKentucky12/11/2016 00:00:0087.00True
-22PerthTrigger20/01/2017 00:00:0015.00False
-23York
-Blacksmith11/11/2017 00:00:00101.25True
-24PunchestownBuckeye22/12/2016 00:00:0011.50True
-25ChesterQueen14/08/2016 00:00:0010.00False
-26Kelso
-Washington18/09/2016 00:00:0010.00False
-27	KilbegganConnecticut03/03/2017 00:00:0020.00False
-28
-FairyhouseObama11/03/2017 00:00:0055.50True
-29PunchestownKing15/11/2016 00:00:0010.00False
-30	TowcesterJockey08/05/2016 00:00:0016.55True
-31Punchestown
-Clydesdale23/05/2016 00:00:0013.71True
-32CorkWrangler30/11/2016 00:00:0020.00False
-33PunchestownJupiter25/04/2016 00:00:0013.45True
-34Bangor	Tennessee23/01/2016 00:00:0010.00False
-1AintreeCheetah12/05/2017 00:00:0011.58True
-2PunchestownThunder22/12/2016 00:00:00122.52True
-3SandownFlash17/11/2016 00:00:0020.00False
-4AyrBloat03/11/2016 00:00:0025.00False
-5
-FairyhouseQuicksilver02/12/2016 00:00:0065.75True
-6Ayr	Lightning11/03/2017 00:00:0012.05True
-7	Doncaster	QuickFeet02/12/2017 00:00:0010.00False
-8	TowcesterSpeedee12/03/2016 00:00:0050.00False
-9GoodwoodZeus07/10/2017 00:00:00525.74True
-10Kelso	President13/09/2016 00:00:0043.21True
-11PunchestownSheriff05/07/2017 00:00:0035.00False
-12AscotDeputy04/02/2016 00:00:0023.65True
-13KelsoLucky02/08/2017 00:00:0030.00False
-14	TowcesterPablo01/05/2017 00:00:00104.33True
-14Ascot	Horseshoe21/06/2017 00:00:0025.00False
-15BangorBarley22/12/2016 00:00:0030.00False
-16AyrBronco22/05/2017 00:00:0011.50True
-17AscotBlazer23/06/2017 00:00:0030.00False
-18AscotWilbur23/06/2017 00:00:00374.27True
-19GoodwoodBuck05/10/2016 00:00:0034.12True
-20DundalkFranklin09/11/2016 00:00:0020.00False
-21HaydockKentucky12/11/2016 00:00:0087.00True
-22PerthTrigger20/01/2017 00:00:0015.00False
-23York
-Blacksmith11/11/2017 00:00:00101.25True
-24PunchestownBuckeye22/12/2016 00:00:0011.50True
-25ChesterQueen14/08/2016 00:00:0010.00False
-26Kelso
-Washington18/09/2016 00:00:0010.00False
-27	KilbegganConnecticut03/03/2017 00:00:0020.00False
-28
-FairyhouseObama11/03/2017 00:00:0055.50True
-29PunchestownKing15/11/2016 00:00:0010.00False
-30	TowcesterJockey08/05/2016 00:00:0016.55True
-31Punchestown
-Clydesdale23/05/2016 00:00:0013.71True
-32CorkWrangler30/11/2016 00:00:0020.00False
-33PunchestownJupiter25/04/2016 00:00:0013.45True
-34Bangor	Tennessee23/01/2016 00:00:0010.00False

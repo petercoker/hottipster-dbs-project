@@ -97,7 +97,7 @@ namespace HotTipster
             btnCreateFileOfRecord.Enabled = false;
             try
             {
-                hotTipsterMethods.WriteToFile();
+                hotTipsterMethods.WriteToTextFile();
             }
             catch (Exception exception)
             {

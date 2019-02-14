@@ -26,7 +26,8 @@ namespace HotTipster
             Result = result;
         }
 
-        public HorseBet(int betID, string raceCourseName, string horseName, decimal amount, bool result)
+        public HorseBet(int betID, string raceCourseName, 
+            string horseName, decimal amount, bool result)
         {
             BetID = betID;
             RacecourseName = raceCourseName;
@@ -35,14 +36,14 @@ namespace HotTipster
             Result = result;
         }
 
-        public override string ToString()
-        {
-            return $"{nameof(BetID)}: {BetID}{Environment.NewLine}" +
-                   $"{nameof(RacecourseName)}: {RacecourseName}{Environment.NewLine}" +
-                   $"{nameof(HorseName)}: {HorseName}{Environment.NewLine}" +
-                   $"{nameof(Date)}: {Date}{Environment.NewLine}" +
-                   $"{nameof(Amount)}: {Amount}{Environment.NewLine}" +
-                   $"{nameof(Result)}: {Result}{Environment.NewLine}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"{nameof(BetID)}: {BetID}{Environment.NewLine}" +
+        //           $"{nameof(RacecourseName)}: {RacecourseName}{Environment.NewLine}" +
+        //           $"{nameof(HorseName)}: {HorseName}{Environment.NewLine}" +
+        //           $"{nameof(Date)}: {Date}{Environment.NewLine}" +
+        //           $"{nameof(Amount)}: {Amount}{Environment.NewLine}" +
+        //           $"{nameof(Result)}: {Result}{Environment.NewLine}";
+        //}
     }
 }
