@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace HotTipster.BusinessLogic
 
         public static string fileName_HotTipsHistoricData = "HotTipsHistoricData.txt";
         public static string fileName_HotTipsterReport = "HotTipsterReport.txt";
-        //private string[] stringSplitCommaSeparator = { "," };
+        private string[] stringSplitCommaSeparator = { "," };
         #region FileInputAndOutput
 
         //public List<HorseBet> ListOfHotTipsHistoricData2()
@@ -28,7 +29,7 @@ namespace HotTipster.BusinessLogic
         //            {
         //                string line = myreader.ReadLine();
         //                string[] bet = line.Split(stringSplitCommaSeparator, StringSplitOptions.RemoveEmptyEntries);
-        //                bet = MyUtilities.TrimArrayStrings(bet);
+        //                bet = TrimArrayStrings(bet);
         //                bet[1] = bet[1].Substring(1, 4);
         //                bet[3] = bet[3].Substring(0, 2);
         //                bet[4] = bet[4].Substring(0, bet[4].Length - 1);
@@ -177,7 +178,7 @@ namespace HotTipster.BusinessLogic
                     do
                     {
                         var raceCourse = binaryReader.ReadString();
-                        var date = DateTime.Parse(binaryReader.ReadString());
+                        var date = DateTime.ParseExact(binaryReader.ReadString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
                         var amount = decimal.Parse(binaryReader.ReadString());
                         var result = bool.Parse(binaryReader.ReadString());
                         horseBets.Add(new HorseBet

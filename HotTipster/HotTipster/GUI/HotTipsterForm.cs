@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using HotTipster.BusinessLogic;
 
@@ -21,9 +22,12 @@ namespace HotTipster
             else
             {
                 var raceCourse = txtRaceCourse.Text;
-                var date = dtpDate.Value;
-                //var date = dtpDate.Text;
-                //var dateForm = DateTime.Parse(date);
+                //var date = dtpDate.Value;
+                var dateForm = dtpDate.Text;
+                //var date = DateTime.ParseExact(dateForm, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+
+
+                var date = DateTime.Parse(dateForm);
 
 
 

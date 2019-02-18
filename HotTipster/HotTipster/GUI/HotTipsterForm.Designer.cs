@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tpShowReport = new System.Windows.Forms.TabPage();
+            this.fsbMoveScrollBar = new System.Windows.Forms.VScrollBar();
             this.lblDataAnalysis = new System.Windows.Forms.Label();
             this.lblQueries = new System.Windows.Forms.Label();
             this.btnMaxProfitLoseByYear = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.rdoWin = new System.Windows.Forms.RadioButton();
             this.tbcAddRecord = new System.Windows.Forms.TabControl();
-            this.fsbMoveScrollBar = new System.Windows.Forms.VScrollBar();
             this.tpShowReport.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
@@ -80,6 +80,14 @@
             this.tpShowReport.Size = new System.Drawing.Size(477, 564);
             this.tpShowReport.TabIndex = 1;
             this.tpShowReport.Text = "Show Report";
+            // 
+            // fsbMoveScrollBar
+            // 
+            this.fsbMoveScrollBar.Location = new System.Drawing.Point(451, 3);
+            this.fsbMoveScrollBar.Name = "fsbMoveScrollBar";
+            this.fsbMoveScrollBar.Size = new System.Drawing.Size(26, 268);
+            this.fsbMoveScrollBar.TabIndex = 13;
+            this.fsbMoveScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.fsbMoveScrollBar_Scroll);
             // 
             // lblDataAnalysis
             // 
@@ -207,9 +215,9 @@
             // picHorseBet
             // 
             this.picHorseBet.Image = ((System.Drawing.Image)(resources.GetObject("picHorseBet.Image")));
-            this.picHorseBet.Location = new System.Drawing.Point(-1, -2);
+            this.picHorseBet.Location = new System.Drawing.Point(77, -2);
             this.picHorseBet.Name = "picHorseBet";
-            this.picHorseBet.Size = new System.Drawing.Size(487, 194);
+            this.picHorseBet.Size = new System.Drawing.Size(261, 170);
             this.picHorseBet.TabIndex = 0;
             this.picHorseBet.TabStop = false;
             // 
@@ -320,14 +328,6 @@
             this.tbcAddRecord.SelectedIndex = 0;
             this.tbcAddRecord.Size = new System.Drawing.Size(485, 597);
             this.tbcAddRecord.TabIndex = 2;
-            // 
-            // fsbMoveScrollBar
-            // 
-            this.fsbMoveScrollBar.Location = new System.Drawing.Point(451, 3);
-            this.fsbMoveScrollBar.Name = "fsbMoveScrollBar";
-            this.fsbMoveScrollBar.Size = new System.Drawing.Size(26, 268);
-            this.fsbMoveScrollBar.TabIndex = 13;
-            this.fsbMoveScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.fsbMoveScrollBar_Scroll);
             // 
             // Form1
             // 
