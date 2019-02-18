@@ -2,35 +2,138 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace HotTipster.BusinessLogic
 {
     public class HotTipsterMethods
     {
-        //private List<HorseBet> _horseBets;
+        public static string directoryPath =
+            @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\";
 
-        //public void initalizeObject()
-        //{
-        //    _horseBets = GetAllBetRecordData();
-        //}
-        
+        public static string fileName_HotTipsHistoricData = "HotTipsHistoricData.txt";
+        public static string fileName_HotTipsterReport = "HotTipsterReport.txt";
+        //private string[] stringSplitCommaSeparator = { "," };
         #region FileInputAndOutput
-        
+
+        //public List<HorseBet> ListOfHotTipsHistoricData2()
+        //{
+        //    var result = new List<HorseBet>();
+        //    try
+        //    {
+        //        using (FileStream fs = File.OpenRead($@"{directoryPath}{fileName_HotTipsHistoricData}"))
+        //        using (TextReader myreader = new StreamReader(fs, Encoding.UTF8))
+        //        {
+        //            while (myreader.Peek() > -1)
+        //            {
+        //                string line = myreader.ReadLine();
+        //                string[] bet = line.Split(stringSplitCommaSeparator, StringSplitOptions.RemoveEmptyEntries);
+        //                bet = MyUtilities.TrimArrayStrings(bet);
+        //                bet[1] = bet[1].Substring(1, 4);
+        //                bet[3] = bet[3].Substring(0, 2);
+        //                bet[4] = bet[4].Substring(0, bet[4].Length - 1);
+
+        //                result.Add(new HorseBet(bet[0], new DateTime(int.Parse(bet[1]), int.Parse(bet[2]), int.Parse(bet[3])), decimal.Parse(bet[4]), bool.Parse(bet[5]), 0));
+        //            }
+        //        }
+        //    }
+        //    catch
+        //    {
+
+        //        throw new Exception("File input does not match expected datatypes");
+        //    }
+
+        //    return result;
+        //}
+
+        public static List<HorseBet> ListOfHotTipsHistoricData()
+        {
+            var bet = new HorseBet();
+
+            List<HorseBet> betRecord = new List<HorseBet>();
+
+            using (var fileStreams = new FileStream($@"{directoryPath}{fileName_HotTipsHistoricData}", FileMode.Open))
+            using (var binaryReader = new BinaryReader(fileStreams))
+            {
+                while (binaryReader.PeekChar() != -1)
+                {
+                    var raceCourse = binaryReader.ReadString();
+                    var raceDate = binaryReader.ReadString();
+                    var date = DateTime.Parse(raceDate);
+                    //var date = DateTime.Parse(binaryReader.ReadString());
+                    var amount = binaryReader.ReadDecimal();
+                    var result = binaryReader.ReadBoolean();
+                    betRecord.Add(new HorseBet() { RaceCourse = raceCourse, Date = date, Amount = amount, Result = result });
+                }
+
+            }
+            return betRecord;
+        }
+
+        public static List<HorseBet> LoadHotTipsHistoricData()
+        {
+
+            //var result = new List<HorseBet>();
+            //try
+            //{
+            //    using (FileStream fs = File.OpenRead($@"{directoryPath}{fileName_HotTipsHistoricData}"))
+            //    using (TextReader myreader = new StreamReader(fs, Encoding.UTF8))
+            //    {
+            //        while (myreader.Peek() > -1)
+            //        {
+            //            string line = myreader.ReadLine();
+            //            string[] bet = line.Split(stringSplitCommaSeparator, StringSplitOptions.RemoveEmptyEntries);
+            //            bet = MyUtilities.TrimArrayStrings(bet);
+            //            bet[1] = bet[1].Substring(1, 4);
+            //            bet[3] = bet[3].Substring(0, 2);
+            //            bet[4] = bet[4].Substring(0, bet[4].Length - 1);
+
+            //            result.Add(new HorseBet(bet[0], new DateTime(int.Parse(bet[1]), int.Parse(bet[2]), int.Parse(bet[3])), decimal.Parse(bet[4]), bool.Parse(bet[5]), 0));
+            //        }
+            //    }
+            //}
+            //catch
+            //{
+
+            //    throw new Exception("File input does not match expected datatypes");
+            //}
+
+            //return result;
+            //var bet = new HorseBet();
+
+            List<HorseBet> betRecord = new List<HorseBet>();
+
+            using (var fileStreams = new FileStream($@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Open))
+            using (var binaryReader = new BinaryReader(fileStreams))
+            {
+                while (binaryReader.PeekChar() != -1)
+                {
+                    var raceCourse = binaryReader.ReadString();
+                    var raceDate = binaryReader.ReadString();
+                    var date = DateTime.Parse(raceDate);
+                    //var date = DateTime.Parse(binaryReader.ReadString());
+                    var amount = binaryReader.ReadDecimal();
+                    var result = binaryReader.ReadBoolean();
+                    betRecord.Add(new HorseBet() { RaceCourse = raceCourse, Date = date, Amount = amount, Result = result });
+                }
+
+            }
+            return betRecord;
+        }
+
+
         public void WriteToTextFile() //Test method
         {
-            var horseBets = BetRecords.LoadRoads();
+            //var horseBets = BetRecords.LoadRoads();
+            var horseBets = ListOfHotTipsHistoricData();
             foreach (var horseBet in horseBets)
             {
-                using (var fileStream = new FileStream(@"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\HotTipsterReport.txt",
+                using (var fileStream = new FileStream($@"{directoryPath}{fileName_HotTipsterReport}",
                     FileMode.Append, FileAccess.Write, FileShare.None))
                 using (var binaryWriter = new BinaryWriter(fileStream))
                 {
-                    var bet = new HorseBet(horseBet.BetID, horseBet.RacecourseName,
-                    horseBet.HorseName, horseBet.Date, horseBet.Amount, horseBet.Result);
-                    binaryWriter.Write(Environment.NewLine + horseBet.BetID);//.ToString());
-                    binaryWriter.Write(bet.RacecourseName);
-                    binaryWriter.Write(bet.HorseName);
+                    var bet = new HorseBet(horseBet.RaceCourse, horseBet.Date, horseBet.Amount, horseBet.Result);
+                    binaryWriter.Write(Environment.NewLine + bet.RaceCourse);
                     binaryWriter.Write(bet.Date.ToString());
                     binaryWriter.Write(bet.Amount.ToString());
                     binaryWriter.Write(bet.Result.ToString());
@@ -38,20 +141,16 @@ namespace HotTipster.BusinessLogic
             }
         }
 
-        public void AppendData(int betID, string racecourseName,
-            string horseName, DateTime date, //Test method
+        public void AppendData(string raceCourse, DateTime date, //Test method
             decimal amount, bool result)
         {
             using (var fileStream = File.Open(
-                @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\HotTipsterReport.txt",
-                FileMode.Open))
+                $@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Open))
             {
                 using (var binaryWriter = new BinaryWriter(fileStream))
                 {
-                    var bet = new HorseBet(betID, racecourseName, horseName, date, amount, result);
-                    binaryWriter.Write(Environment.NewLine + bet.BetID);//.ToString());
-                    binaryWriter.Write(bet.RacecourseName);
-                    binaryWriter.Write(bet.HorseName);
+                    var bet = new HorseBet(raceCourse, date, amount, result);
+                    binaryWriter.Write(Environment.NewLine + bet.RaceCourse);;
                     binaryWriter.Write(bet.Date.ToString());
                     binaryWriter.Write(bet.Amount.ToString());
                     binaryWriter.Write(bet.Result.ToString());
@@ -70,26 +169,20 @@ namespace HotTipster.BusinessLogic
            var horseBets = new List<HorseBet>();
 
             using (Stream fileStream =
-                File.Open(
-                    @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\HotTipsterReport.txt",
-                    FileMode.Open))
+                File.Open($@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Open))
             {
                 using (var binaryReader = new BinaryReader(fileStream))
                 {
                     var length = (int)binaryReader.BaseStream.Length;
                     do
                     {
-                        var betID = int.Parse(binaryReader.ReadString());
-                        var racecourseName = binaryReader.ReadString();
-                        var horseName = binaryReader.ReadString();
+                        var raceCourse = binaryReader.ReadString();
                         var date = DateTime.Parse(binaryReader.ReadString());
                         var amount = decimal.Parse(binaryReader.ReadString());
                         var result = bool.Parse(binaryReader.ReadString());
                         horseBets.Add(new HorseBet
                         {
-                            BetID = betID,
-                            RacecourseName = racecourseName,
-                            HorseName = horseName,
+                            RaceCourse = raceCourse,
                             Date = date,
                             Amount = amount,
                             Result = result
@@ -103,24 +196,18 @@ namespace HotTipster.BusinessLogic
 
         public string ShowAllBetRecords(string horseBetRecord)
         {
-            using (var fileStream = File.Open(
-                @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\advanced-horse-race-tipster\HotTipster\HotTipsterReport.txt",
-                FileMode.Open))
+            using (var fileStream = File.Open($@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Open))
             {
                 using (var binaryReader = new BinaryReader(fileStream))
                 {
                     var length = (int)binaryReader.BaseStream.Length;
                     do
                     {
-                        var betID = int.Parse(binaryReader.ReadString());
-                        var racecourseName = binaryReader.ReadString();
-                        var horseName = binaryReader.ReadString();
+                        var raceCourse = binaryReader.ReadString();
                         var date = DateTime.Parse(binaryReader.ReadString());
                         var amount = decimal.Parse(binaryReader.ReadString());
                         var result = bool.Parse(binaryReader.ReadString());
-                        horseBetRecord += ($"Bet ID: {betID}" +
-                                           $"\nRaceCourse Name: {racecourseName}" +
-                                           $"\nHorse Name: {horseName}" +
+                        horseBetRecord += ($"Race Course: {raceCourse}" +
                                            $"\nDate: {date}" +
                                            $"\nAmount: {amount}" +
                                            $"\nWin or Lost: {result}") 
@@ -133,64 +220,24 @@ namespace HotTipster.BusinessLogic
         }
 
         #endregion
-
-        #region FiltersByBetID
         
-        public string GetHorseBetID(int betID)
-        {
-            string horseBetRecord;
-            var horseBets = GetAllBetRecordData();
-            foreach (var horseBet in horseBets)
-            {
-                if (horseBet.BetID.Equals(betID))
-                {
-                    return horseBetRecord = $"Bet ID: {horseBet.BetID}" +
-                                            $"\nRaceCourse Name: {horseBet.RacecourseName}" +
-                                            $"\nHorse Name: {horseBet.HorseName}" +
-                                            $"\nDate: {horseBet.Date}" +
-                                            $"\nAmount: {horseBet.Amount}" +
-                                            $"\nWin or Lost: {horseBet.Result}";
-                }
-            }
-
-            return horseBetRecord = $"Horse Bet ID {betID} not found";
-        }
-        #endregion
-
         //Used all function in form
-        #region FilterByRacecourseName
+        #region FilterByRaceCourse
 
-        public string GetMostPopularRacecourseBets(string hourseBetRecord)
+        public string GetMostPopularRaceCourseBets(string hourseBetRecord)
         {
             var horseBets = GetAllBetRecordData();
-            var racecourseName = horseBets.GroupBy(racecourse => racecourse.RacecourseName)
-                .OrderByDescending(popularRacecourse => popularRacecourse.Count())
-                .Select(popularRacecourse => popularRacecourse.Key).First();
+            var racecourseName = horseBets.GroupBy(r => r.RaceCourse)
+                .OrderByDescending(p => p.Count())
+                .Select(p => p.Key).First();
 
-            var popularRacecourseName = racecourseName.ToString();
+            var popularRaceCourse = racecourseName.ToString();
 
-            hourseBetRecord = $"Most Popular racecourse for bets: {popularRacecourseName}";
+            hourseBetRecord = $"Most Popular racecourse for bets: {popularRaceCourse}";
             return hourseBetRecord;
         }
         #endregion
-
-        //Used all function in form
-        #region FilterByHorseName
-
-        public string GetMostPopularHorse(string hourseBetRecord)
-        {
-            var horseBets = GetAllBetRecordData();
-            var hourseName = horseBets.GroupBy(horse => horse.HorseName)
-                .OrderByDescending(popularHorse => popularHorse.Count())
-                .Select(popularHorse => popularHorse.Key).First();
-
-            var popularHourseName = hourseName.ToString();
-
-            hourseBetRecord = $"Most Popular hourse for bets: {popularHourseName}";
-            return hourseBetRecord;
-        }
-
-        #endregion
+        
 
         //Used all function in form
         #region FilterByDate
@@ -202,10 +249,11 @@ namespace HotTipster.BusinessLogic
             horseBets = horseBets.OrderBy(date => date.Date).ToList();
             foreach (var horseBet in horseBets)
             {
-                horseBetRecord += ($"Bet ID: {horseBet.BetID}\nRaceCourse Name: {horseBet.RacecourseName}" +
-                                   $"\nHorse Name: {horseBet.HorseName}\nDate: {horseBet.Date}" +
-                                   $"\nAmount: {horseBet.Amount}\nWin or Lost: {horseBet.Result}")
-                                   + Environment.NewLine;
+                horseBetRecord += ($"Race Course: {horseBet.RaceCourse}" +
+                                   $"\nDate: {horseBet.Date}" +
+                                   $"\nAmount: {horseBet.Amount}" +
+                                   $"\nWin or Lost: {horseBet.Result}") + 
+                                   Environment.NewLine;
             }
 
             return horseBetRecord;
@@ -241,27 +289,6 @@ namespace HotTipster.BusinessLogic
         #region FilterByAmount
         //Get highest amount won for a bet laid and the most lost for a bet laid.
         //Not used in form yet
-        public string GetHighestAmountWon(string horseBetRecord)
-        {
-            var horseBets = GetAllBetRecordData();
-            decimal highestBetWon = 0;
-
-            highestBetWon = horseBets.Where(bet => bet.Result == true).Max(bet => bet.Amount);
-            horseBetRecord = $"The hightest amount won for a bet laid: €{highestBetWon}";
-
-            return horseBetRecord;
-        }
-
-        public string GetMostAmountLost(string horseBetRecord)
-        {
-            var horseBets = GetAllBetRecordData();
-            decimal highestBetLost = 0;
-
-            highestBetLost = horseBets.Where(bet => bet.Result == false).Max(bet => bet.Amount);
-            horseBetRecord = $"The hightest amount lost for a bet laid: €{highestBetLost}";
-
-            return horseBetRecord;
-        }
 
         public string GetHighestAmountWonAndLost(string horseBetRecord)
         {
@@ -269,8 +296,8 @@ namespace HotTipster.BusinessLogic
             decimal highestBetWon = 0;
             decimal highestBetLost = 0;
 
-            highestBetWon = horseBets.Where(bet => bet.Result == true).Max(bet => bet.Amount);
-            highestBetLost = horseBets.Where(bet => bet.Result == false).Max(bet => bet.Amount);
+            highestBetWon = horseBets.Where(b => b.Result == true).Max(b => b.Amount);
+            highestBetLost = horseBets.Where(b => b.Result == false).Max(b => b.Amount);
             horseBetRecord = $"The highest amount won: €{highestBetWon}" +
                              $"\nThe highest amount lost: €{highestBetLost}";
 
@@ -290,8 +317,8 @@ namespace HotTipster.BusinessLogic
             var sucessfulhorseRace = 0;
 
             horseRace = horseBets.Count();
-            sucessfulhorseRace = horseBets.Where(race => race.Result == true).Count();
-            //sucessfulhorseRace = horseBets.Count(race => race.Result == true);
+            sucessfulhorseRace = horseBets.Where(r => r.Result == true).Count();
+            //sucessfulhorseRace = horseBets.Count(r => r.Result == true);
 
             horseRecord = $"Total number of races and HotTipster wins: {sucessfulhorseRace}/{horseRace}";
             return horseRecord;

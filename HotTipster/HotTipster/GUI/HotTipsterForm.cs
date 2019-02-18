@@ -14,19 +14,18 @@ namespace HotTipster
 
         private void btnAddBet_Click(object sender, EventArgs e)
         {
-            if (txtBetID.Text == string.Empty || txtRacecourseName.Text == string.Empty ||
-                txtHorseName.Text == string.Empty || txtAmount.Text == string.Empty)
+            if (txtRaceCourse.Text == string.Empty ||txtAmount.Text == string.Empty)
             {
                 MessageBox.Show("Must have a value");
             }
             else
             {
-                var betID = int.Parse(txtBetID.Text);
-                var racecourseName = txtRacecourseName.Text;
-                var horseName = txtHorseName.Text;
+                var raceCourse = txtRaceCourse.Text;
                 var date = dtpDate.Value;
                 //var date = dtpDate.Text;
                 //var dateForm = DateTime.Parse(date);
+
+
 
                 try
                 {
@@ -43,17 +42,15 @@ namespace HotTipster
 
                     try
                     {
-                        hotTipsterMethods.AppendData(betID, racecourseName, horseName, date, amount, result);
+                        hotTipsterMethods.AppendData(raceCourse, date, amount, result);
                     }
 
                     catch (Exception exception)
                     {
                         MessageBox.Show(exception.Message);
                     }
-
-                    txtBetID.Clear();
-                    txtRacecourseName.Clear();
-                    txtHorseName.Clear();
+                    
+                    txtRaceCourse.Clear();
                     txtAmount.Clear();
 
                 }
@@ -107,7 +104,7 @@ namespace HotTipster
 
         private void btnMaxProfitLoseByYear_Click(object sender, EventArgs e)
         {
-            txtRacecourseName.Clear();
+            txtRaceCourse.Clear();
             var horseBetRecord = "";
             try
             {
@@ -139,28 +136,14 @@ namespace HotTipster
 
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.GetMostPopularRacecourseBets(horseBetRecord);
+                rtbDisplay.Text = hotTipsterMethods.GetMostPopularRaceCourseBets(horseBetRecord);
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
         }
-
-        private void btnFavouriteHorse_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetMostPopularHorse(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
-
+        
         private void btnBetsSuccessRate_Click(object sender, EventArgs e)
         {
             var horseBetRecord = "";
@@ -175,48 +158,9 @@ namespace HotTipster
             }
         }
 
-        private void btnMaxBetWon_Click(object sender, EventArgs e)
+        private void fsbMoveScrollBar_Scroll(object sender, ScrollEventArgs e)
         {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWon(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
-
-        private void btnMaxBetLost_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetMostAmountLost(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            var betID = int.Parse(txtBetIDNumber.Text);
-
-            try
-            {
-                rtbDisplay2.Text = hotTipsterMethods.GetHorseBetID(betID);
-                txtBetIDNumber.Clear();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
+            fsbMoveScrollBar.Text = rtbDisplay.Text;
         }
     }
 }
