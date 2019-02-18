@@ -1,0 +1,3 @@
+BetID	RacecourseName	HorseName	Date	Amount	Result
+Aintree					
+Punchestown					
