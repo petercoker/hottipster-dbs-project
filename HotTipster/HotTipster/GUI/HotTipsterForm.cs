@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Forms;
+using HotTipster.Utilities;
 using HotTipster.BusinessLogic;
 
 namespace HotTipster
@@ -8,6 +9,7 @@ namespace HotTipster
     public partial class Form1 : Form
     {
         HotTipsterMethods hotTipsterMethods = new HotTipsterMethods();
+        Utilities.Utilities hotTipserUtilities = new Utilities.Utilities();
         public Form1()
         {
             InitializeComponent();
@@ -22,12 +24,22 @@ namespace HotTipster
             else
             {
                 var raceCourse = txtRaceCourse.Text;
+                var dateAndTime = dtpDate.Value;
+                
+                var date = 
+                    formatDate(dateAndTime);
+                //DateTime dateFormate = new DateTime(dateAndTime.Year, dateAndTime.Month, dateAndTime.Day);
+
+                //var date = dateFormate.ToString();
+
+
                 //var date = dtpDate.Value;
-                var dateForm = dtpDate.Text;
-                //var date = DateTime.ParseExact(dateForm, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+
+                //var dateForm = dtpDate.Text;
+                //var date = DateTsime.ParseExact(dateForm, "yyyy-MM-dd", CultureInfo.InvariantCulture);
 
 
-                var date = DateTime.Parse(dateForm);
+                //var date = DateTime.Parse(dateForm);
 
 
 
@@ -53,7 +65,7 @@ namespace HotTipster
                     {
                         MessageBox.Show(exception.Message);
                     }
-                    
+
                     txtRaceCourse.Clear();
                     txtAmount.Clear();
 
@@ -64,6 +76,8 @@ namespace HotTipster
                 }
             }
         }
+
+        
 
         private void btnShowAllBetRecords_Click(object sender, EventArgs e)
         {
@@ -95,15 +109,15 @@ namespace HotTipster
 
         private void btnCreateFileOfRecord_Click(object sender, EventArgs e)
         {
-            btnCreateFileOfRecord.Enabled = false;
-            try
-            {
-                hotTipsterMethods.WriteToTextFile();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
+            //btnCreateFileOfRecord.Enabled = false;
+            //try
+            //{
+            //    hotTipsterMethods.WriteToTextFile();
+            //}
+            //catch (Exception exception)
+            //{
+            //    MessageBox.Show(exception.Message);
+            //}
         }
 
         private void btnMaxProfitLoseByYear_Click(object sender, EventArgs e)

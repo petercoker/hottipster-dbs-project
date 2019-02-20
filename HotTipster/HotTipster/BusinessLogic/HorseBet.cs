@@ -5,14 +5,14 @@ namespace HotTipster
     public class HorseBet 
     {
         public string RaceCourse { get; set; }
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
         public decimal Amount { get; set; }
         public bool Result { get; set; }
 
         public HorseBet() 
         {}
 
-        public HorseBet(string raceCourse, DateTime date,
+        public HorseBet(string raceCourse, string date,
             decimal amount, bool result)
         {
             RaceCourse = raceCourse;
