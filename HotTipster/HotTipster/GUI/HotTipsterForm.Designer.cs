@@ -53,7 +53,7 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.rdoWin = new System.Windows.Forms.RadioButton();
             this.tbcAddRecord = new System.Windows.Forms.TabControl();
-            this.fsbMoveScrollBar = new System.Windows.Forms.VScrollBar();
+            this.btnClearDisplay = new System.Windows.Forms.Button();
             this.tpShowReport.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,7 +63,7 @@
             // tpShowReport
             // 
             this.tpShowReport.BackColor = System.Drawing.Color.LawnGreen;
-            this.tpShowReport.Controls.Add(this.fsbMoveScrollBar);
+            this.tpShowReport.Controls.Add(this.btnClearDisplay);
             this.tpShowReport.Controls.Add(this.lblDataAnalysis);
             this.tpShowReport.Controls.Add(this.lblQueries);
             this.tpShowReport.Controls.Add(this.btnMaxProfitLoseByYear);
@@ -321,13 +321,15 @@
             this.tbcAddRecord.Size = new System.Drawing.Size(485, 597);
             this.tbcAddRecord.TabIndex = 2;
             // 
-            // fsbMoveScrollBar
+            // btnClearDisplay
             // 
-            this.fsbMoveScrollBar.Location = new System.Drawing.Point(451, 3);
-            this.fsbMoveScrollBar.Name = "fsbMoveScrollBar";
-            this.fsbMoveScrollBar.Size = new System.Drawing.Size(26, 268);
-            this.fsbMoveScrollBar.TabIndex = 13;
-            this.fsbMoveScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.fsbMoveScrollBar_Scroll);
+            this.btnClearDisplay.Location = new System.Drawing.Point(257, 337);
+            this.btnClearDisplay.Name = "btnClearDisplay";
+            this.btnClearDisplay.Size = new System.Drawing.Size(199, 39);
+            this.btnClearDisplay.TabIndex = 14;
+            this.btnClearDisplay.Text = "Clear Display";
+            this.btnClearDisplay.UseVisualStyleBackColor = true;
+            this.btnClearDisplay.Click += new System.EventHandler(this.btnClearDisplay_Click);
             // 
             // Form1
             // 
@@ -373,7 +375,7 @@
         private System.Windows.Forms.RadioButton rdoWin;
         private System.Windows.Forms.TabControl tbcAddRecord;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.VScrollBar fsbMoveScrollBar;
+        private System.Windows.Forms.Button btnClearDisplay;
     }
 }
 

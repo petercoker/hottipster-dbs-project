@@ -150,16 +150,22 @@ namespace HotTipster.BusinessLogic
             decimal amount, bool result)
         {
             using (var fileStream = File.Open(
-                $@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Open))
+                $@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Append))
             {
-                using (var binaryWriter = new BinaryWriter(fileStream))
+                using (var textWriter = new StreamWriter(fileStream))
                 {
                     var bet = new HorseBet(raceCourse, date, amount, result);
-                    binaryWriter.Write(Environment.NewLine + bet.RaceCourse);;
-                    binaryWriter.Write(bet.Date);
-                    binaryWriter.Write(bet.Amount.ToString());
-                    binaryWriter.Write(bet.Result.ToString());
+                    textWriter.Write($"{bet.RaceCourse}, {bet.Date}, {bet.Amount}, {bet.Result}{Environment.NewLine}");
                 }
+
+                //using (var binaryWriter = new BinaryWriter(fileStream))
+                //{
+                //    var bet = new HorseBet(raceCourse, date, amount, result);
+                //    binaryWriter.Write(Environment.NewLine + bet.RaceCourse); ;
+                //    binaryWriter.Write(bet.Date);
+                //    binaryWriter.Write(bet.Amount.ToString());
+                //    binaryWriter.Write(bet.Result.ToString());
+                //}
             }
         }
 
@@ -184,9 +190,6 @@ namespace HotTipster.BusinessLogic
                 {
                     var raceCourse = binaryReader.ReadString();
                     var date = binaryReader.ReadString();
-
-                    //var date = DateTime.Parse(raceDate);
-                    //var date = DateTime.Parse(binaryReader.ReadString());
                     var amount = binaryReader.ReadDecimal();
                     var result = binaryReader.ReadBoolean();
                     betRecord.Add(new HorseBet() {RaceCourse = raceCourse, Date = date, Amount = amount, Result = result});
@@ -264,7 +267,7 @@ namespace HotTipster.BusinessLogic
                         var date = binaryReader.ReadString();
                         var amount = decimal.Parse(binaryReader.ReadString());
                         var result = bool.Parse(binaryReader.ReadString());
-                        horseBetRecord += ($"{raceCourse}, {date}, {amount}m, {result}") + Environment.NewLine;
+                        horseBetRecord +=$"{raceCourse}, {date}, {amount}m, {result}" + Environment.NewLine;
                     } while (binaryReader.BaseStream.Position != length);
 
                     return horseBetRecord;
@@ -381,19 +384,7 @@ namespace HotTipster.BusinessLogic
         }
 
         #endregion
+        
 
-        #region Utilities
-
-        public static string formatDate(DateTime dateAndTime)
-        {
-            var year = dateAndTime.Year;
-            var month = dateAndTime.Month;
-            var day = dateAndTime.Day;
-
-            var date = string.Format($"({year}, {month}, {day},)");
-            return date;
-        }
-
-        #endregion
     }
 }

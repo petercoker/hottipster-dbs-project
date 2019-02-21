@@ -25,9 +25,7 @@ namespace HotTipster
             {
                 var raceCourse = txtRaceCourse.Text;
                 var dateAndTime = dtpDate.Value;
-                
-                var date = 
-                    formatDate(dateAndTime);
+                var date = hotTipserUtilities.formatDate(dateAndTime);
                 //DateTime dateFormate = new DateTime(dateAndTime.Year, dateAndTime.Month, dateAndTime.Day);
 
                 //var date = dateFormate.ToString();
@@ -176,9 +174,14 @@ namespace HotTipster
             }
         }
 
-        private void fsbMoveScrollBar_Scroll(object sender, ScrollEventArgs e)
+        //private void fsbMoveScrollBar_Scroll(object sender, ScrollEventArgs e)
+        //{
+        //    fsbMoveScrollBar.Text = rtbDisplay.Text;
+        //}
+
+        private void btnClearDisplay_Click(object sender, EventArgs e)
         {
-            fsbMoveScrollBar.Text = rtbDisplay.Text;
+            rtbDisplay.Clear();
         }
     }
 }
