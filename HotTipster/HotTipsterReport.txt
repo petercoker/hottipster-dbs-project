@@ -1,12 +1,2 @@
 dsfghj, (2019, 2, 20,), 2554, True
-test2, (2019, 2, 20,), 23456789, False
-test3, (2019, 2, 21,), 345678, False
 
-test10, (2019, 2, 21,), 0, False
-
-test201, (2019, 2, 21,), 34, True
-
-rtyuio, (2019, 1, 24,), 466787, True
-
-werewroewiruewuioruewoiruew, (2019, 2, 21,), 2342, True
-e43324, (2019, 2, 21,), 23423, False

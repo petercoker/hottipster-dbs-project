@@ -26,17 +26,13 @@ namespace HotTipster
                 var raceCourse = txtRaceCourse.Text;
                 var dateAndTime = dtpDate.Value;
                 var date = hotTipserUtilities.formatDate(dateAndTime);
+
+
                 //DateTime dateFormate = new DateTime(dateAndTime.Year, dateAndTime.Month, dateAndTime.Day);
-
                 //var date = dateFormate.ToString();
-
-
                 //var date = dtpDate.Value;
-
                 //var dateForm = dtpDate.Text;
                 //var date = DateTsime.ParseExact(dateForm, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-
-
                 //var date = DateTime.Parse(dateForm);
 
 

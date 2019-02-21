@@ -192,7 +192,7 @@ namespace HotTipster.BusinessLogic
                     var date = binaryReader.ReadString();
                     var amount = binaryReader.ReadDecimal();
                     var result = binaryReader.ReadBoolean();
-                    betRecord.Add(new HorseBet() {RaceCourse = raceCourse, Date = date, Amount = amount, Result = result});
+                    //betRecord.Add(new HorseBet() {RaceCourse = raceCourse, Date = date, Amount = amount, Result = result});
                 }
 
                 return betRecord;
