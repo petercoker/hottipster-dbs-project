@@ -146,8 +146,8 @@ namespace HotTipster.BusinessLogic
         //    }
         //}
 
-        public void AppendData(string raceCourse, string date, //Test method
-            decimal amount, bool result)
+        public void AppendData(string raceCourse, string date, 
+            decimal amount, bool result) //Tested 
         {
             using (var fileStream = File.Open(
                 $@"{directoryPath}{fileName_HotTipsterReport}", FileMode.Append))
@@ -155,7 +155,7 @@ namespace HotTipster.BusinessLogic
                 using (var textWriter = new StreamWriter(fileStream))
                 {
                     var bet = new HorseBet(raceCourse, date, amount, result);
-                    textWriter.Write($"{bet.RaceCourse}, {bet.Date}, {bet.Amount}, {bet.Result}{Environment.NewLine}");
+                    textWriter.Write($"{bet.RaceCourse}, {bet.Date}, {bet.Amount}, {bet.Result} {Environment.NewLine}");
                 }
 
                 //using (var binaryWriter = new BinaryWriter(fileStream))

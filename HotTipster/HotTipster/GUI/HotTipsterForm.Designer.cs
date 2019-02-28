@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tpShowReport = new System.Windows.Forms.TabPage();
+            this.btnClearDisplay = new System.Windows.Forms.Button();
             this.lblDataAnalysis = new System.Windows.Forms.Label();
             this.lblQueries = new System.Windows.Forms.Label();
             this.btnMaxProfitLoseByYear = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.rdoWin = new System.Windows.Forms.RadioButton();
             this.tbcAddRecord = new System.Windows.Forms.TabControl();
-            this.btnClearDisplay = new System.Windows.Forms.Button();
             this.tpShowReport.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,6 +80,16 @@
             this.tpShowReport.Size = new System.Drawing.Size(477, 564);
             this.tpShowReport.TabIndex = 1;
             this.tpShowReport.Text = "Show Report";
+            // 
+            // btnClearDisplay
+            // 
+            this.btnClearDisplay.Location = new System.Drawing.Point(257, 337);
+            this.btnClearDisplay.Name = "btnClearDisplay";
+            this.btnClearDisplay.Size = new System.Drawing.Size(199, 39);
+            this.btnClearDisplay.TabIndex = 14;
+            this.btnClearDisplay.Text = "Clear Display";
+            this.btnClearDisplay.UseVisualStyleBackColor = true;
+            this.btnClearDisplay.Click += new System.EventHandler(this.btnClearDisplay_Click);
             // 
             // lblDataAnalysis
             // 
@@ -200,16 +210,16 @@
             this.tpAddRecord.Location = new System.Drawing.Point(4, 29);
             this.tpAddRecord.Name = "tpAddRecord";
             this.tpAddRecord.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAddRecord.Size = new System.Drawing.Size(477, 564);
+            this.tpAddRecord.Size = new System.Drawing.Size(474, 564);
             this.tpAddRecord.TabIndex = 0;
             this.tpAddRecord.Text = "Add Record";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(481, 185);
+            this.pictureBox2.Size = new System.Drawing.Size(468, 185);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
@@ -318,24 +328,14 @@
             this.tbcAddRecord.Location = new System.Drawing.Point(12, 12);
             this.tbcAddRecord.Name = "tbcAddRecord";
             this.tbcAddRecord.SelectedIndex = 0;
-            this.tbcAddRecord.Size = new System.Drawing.Size(485, 597);
+            this.tbcAddRecord.Size = new System.Drawing.Size(482, 597);
             this.tbcAddRecord.TabIndex = 2;
-            // 
-            // btnClearDisplay
-            // 
-            this.btnClearDisplay.Location = new System.Drawing.Point(257, 337);
-            this.btnClearDisplay.Name = "btnClearDisplay";
-            this.btnClearDisplay.Size = new System.Drawing.Size(199, 39);
-            this.btnClearDisplay.TabIndex = 14;
-            this.btnClearDisplay.Text = "Clear Display";
-            this.btnClearDisplay.UseVisualStyleBackColor = true;
-            this.btnClearDisplay.Click += new System.EventHandler(this.btnClearDisplay_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 618);
+            this.ClientSize = new System.Drawing.Size(504, 618);
             this.Controls.Add(this.tbcAddRecord);
             this.Name = "Form1";
             this.Text = "HotTipster";
