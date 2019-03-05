@@ -8,13 +8,12 @@ namespace HotTipster.BusinessLogic
 {
     public class HotTipsterMethods
     {
-        //private List<HorseBet> _horseBets;
-
-        //public void initalizeObject()
-        //{
-        //    _horseBets = GetAllBetRecordData();
-        //}
+        public static string directoryPath =
+            @"C:\Users\sonol\Downloads\_pcloud\_repositories\github\hottipster-dbs-project\HotTipster\";
         
+        public static string fileName_HorseBet = "HorseBet.bin";
+        public static string fileName_HotTipsHistoricData = "HotTipsHistoricData.txt";
+        public static string fileName_HotTipsterReport = "HotTipsterReport.txt";
         #region FileInputAndOutput
 
         public void WriteToTextFile() //Test method
@@ -71,7 +70,7 @@ namespace HotTipster.BusinessLogic
 
             using (Stream fileStream =
                 File.Open(
-                   @"R:\HotTipster\HotTipsterReport.txt",
+                    $@"{directoryPath}{fileName_HotTipsterReport}",
                     FileMode.Open))
             {
                 using (var binaryReader = new BinaryReader(fileStream))
@@ -104,7 +103,7 @@ namespace HotTipster.BusinessLogic
         public string ShowAllBetRecords(string horseBetRecord)
         {
             using (var fileStream = File.Open(
-               @"R:\HotTipster\HotTipsterReport.txt",
+                $@"{directoryPath}{fileName_HotTipsterReport}",
                 FileMode.Open))
             {
                 using (var binaryReader = new BinaryReader(fileStream))
