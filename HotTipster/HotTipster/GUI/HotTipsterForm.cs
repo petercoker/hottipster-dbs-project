@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
 using HotTipster.Utilities;
 using HotTipster.BusinessLogic;
+using HotTipster.DataAccess;
 
 namespace HotTipster
 {
@@ -17,17 +19,17 @@ namespace HotTipster
 
         private void btnAddBet_Click(object sender, EventArgs e)
         {
-            if (txtRaceCourse.Text == string.Empty ||txtAmount.Text == string.Empty)
+            if (txtRaceCourse.Text == string.Empty || txtAmount.Text == string.Empty || txtDate.Text == string.Empty)
             {
                 MessageBox.Show("Must have a value");
             }
+            
             else
             {
-                var raceCourse = txtRaceCourse.Text;
-                var dateAndTime = dtpDate.Value;
-                var date = hotTipserUtilities.formatDate(dateAndTime);
-
-
+                var raceCourse = txtRaceCourse.Text.Trim();
+                var dateAndTime = txtDate.Text.Trim();
+                var date = hotTipserUtilities.ValidRaceDate(dateAndTime);
+                
                 //DateTime dateFormate = new DateTime(dateAndTime.Year, dateAndTime.Month, dateAndTime.Day);
                 //var date = dateFormate.ToString();
                 //var date = dtpDate.Value;
@@ -39,7 +41,7 @@ namespace HotTipster
 
                 try
                 {
-                    var amount = decimal.Parse(txtAmount.Text);
+                    var amount = decimal.Parse(txtAmount.Text.Trim());
                     bool result;
                     if (rdoWin.Checked)
                     {
@@ -52,7 +54,8 @@ namespace HotTipster
 
                     try
                     {
-                        hotTipsterMethods.AppendData(raceCourse, date, amount, result);
+
+                       hotTipsterMethods.WriteToFile(raceCourse, date, amount, result);
                     }
 
                     catch (Exception exception)
@@ -61,6 +64,7 @@ namespace HotTipster
                     }
 
                     txtRaceCourse.Clear();
+                    txtDate.Clear();
                     txtAmount.Clear();
 
                 }
@@ -75,11 +79,11 @@ namespace HotTipster
 
         private void btnShowAllBetRecords_Click(object sender, EventArgs e)
         {
-            var horseBetRecord = "";
-
+            //var horseBetRecord = "";
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(horseBetRecord);
+                //rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords();
+                //rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(horseBetRecord);
             }
             catch (Exception exception)
             {

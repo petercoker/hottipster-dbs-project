@@ -42,7 +42,7 @@
             this.btnShowAllBetRecords = new System.Windows.Forms.Button();
             this.rtbDisplay = new System.Windows.Forms.RichTextBox();
             this.tpAddRecord = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picHorseBet = new System.Windows.Forms.PictureBox();
             this.txtRaceCourse = new System.Windows.Forms.TextBox();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.btnAddBet = new System.Windows.Forms.Button();
@@ -50,13 +50,13 @@
             this.lblAmount = new System.Windows.Forms.Label();
             this.rdoLose = new System.Windows.Forms.RadioButton();
             this.lblDate = new System.Windows.Forms.Label();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblResult = new System.Windows.Forms.Label();
             this.rdoWin = new System.Windows.Forms.RadioButton();
             this.tbcAddRecord = new System.Windows.Forms.TabControl();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.tpShowReport.SuspendLayout();
             this.tpAddRecord.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).BeginInit();
             this.tbcAddRecord.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@
             this.tpShowReport.Location = new System.Drawing.Point(4, 29);
             this.tpShowReport.Name = "tpShowReport";
             this.tpShowReport.Padding = new System.Windows.Forms.Padding(3);
-            this.tpShowReport.Size = new System.Drawing.Size(477, 564);
+            this.tpShowReport.Size = new System.Drawing.Size(474, 564);
             this.tpShowReport.TabIndex = 1;
             this.tpShowReport.Text = "Show Report";
             // 
@@ -194,7 +194,8 @@
             // 
             this.tpAddRecord.BackColor = System.Drawing.Color.LawnGreen;
             this.tpAddRecord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tpAddRecord.Controls.Add(this.pictureBox2);
+            this.tpAddRecord.Controls.Add(this.txtDate);
+            this.tpAddRecord.Controls.Add(this.picHorseBet);
             this.tpAddRecord.Controls.Add(this.txtRaceCourse);
             this.tpAddRecord.Controls.Add(this.txtAmount);
             this.tpAddRecord.Controls.Add(this.btnAddBet);
@@ -202,7 +203,6 @@
             this.tpAddRecord.Controls.Add(this.lblAmount);
             this.tpAddRecord.Controls.Add(this.rdoLose);
             this.tpAddRecord.Controls.Add(this.lblDate);
-            this.tpAddRecord.Controls.Add(this.dtpDate);
             this.tpAddRecord.Controls.Add(this.lblResult);
             this.tpAddRecord.Controls.Add(this.rdoWin);
             this.tpAddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,36 +214,36 @@
             this.tpAddRecord.TabIndex = 0;
             this.tpAddRecord.Text = "Add Record";
             // 
-            // pictureBox2
+            // picHorseBet
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(468, 185);
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
+            this.picHorseBet.Image = ((System.Drawing.Image)(resources.GetObject("picHorseBet.Image")));
+            this.picHorseBet.Location = new System.Drawing.Point(3, 6);
+            this.picHorseBet.Name = "picHorseBet";
+            this.picHorseBet.Size = new System.Drawing.Size(468, 185);
+            this.picHorseBet.TabIndex = 21;
+            this.picHorseBet.TabStop = false;
             // 
             // txtRaceCourse
             // 
-            this.txtRaceCourse.Location = new System.Drawing.Point(179, 208);
+            this.txtRaceCourse.Location = new System.Drawing.Point(243, 208);
             this.txtRaceCourse.Name = "txtRaceCourse";
-            this.txtRaceCourse.Size = new System.Drawing.Size(276, 26);
+            this.txtRaceCourse.Size = new System.Drawing.Size(212, 26);
             this.txtRaceCourse.TabIndex = 19;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(180, 315);
+            this.txtAmount.Location = new System.Drawing.Point(243, 315);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(275, 26);
+            this.txtAmount.Size = new System.Drawing.Size(212, 26);
             this.txtAmount.TabIndex = 9;
             // 
             // btnAddBet
             // 
             this.btnAddBet.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBet.Location = new System.Drawing.Point(199, 413);
+            this.btnAddBet.Location = new System.Drawing.Point(243, 432);
             this.btnAddBet.Name = "btnAddBet";
-            this.btnAddBet.Size = new System.Drawing.Size(233, 61);
+            this.btnAddBet.Size = new System.Drawing.Size(212, 61);
             this.btnAddBet.TabIndex = 18;
             this.btnAddBet.Text = "Add Bet";
             this.btnAddBet.UseVisualStyleBackColor = false;
@@ -253,27 +253,27 @@
             // 
             this.lblRacecourseName.AutoSize = true;
             this.lblRacecourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRacecourseName.Location = new System.Drawing.Point(12, 207);
+            this.lblRacecourseName.Location = new System.Drawing.Point(6, 207);
             this.lblRacecourseName.Name = "lblRacecourseName";
-            this.lblRacecourseName.Size = new System.Drawing.Size(137, 25);
+            this.lblRacecourseName.Size = new System.Drawing.Size(82, 25);
             this.lblRacecourseName.TabIndex = 2;
-            this.lblRacecourseName.Text = "Race Course";
+            this.lblRacecourseName.Text = "Course";
             // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(12, 314);
+            this.lblAmount.Location = new System.Drawing.Point(3, 314);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(124, 25);
+            this.lblAmount.Size = new System.Drawing.Size(86, 25);
             this.lblAmount.TabIndex = 3;
-            this.lblAmount.Text = "Bet Amount";
+            this.lblAmount.Text = "Amount";
             // 
             // rdoLose
             // 
             this.rdoLose.AutoSize = true;
             this.rdoLose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoLose.Location = new System.Drawing.Point(352, 363);
+            this.rdoLose.Location = new System.Drawing.Point(375, 373);
             this.rdoLose.Name = "rdoLose";
             this.rdoLose.Size = new System.Drawing.Size(80, 29);
             this.rdoLose.TabIndex = 10;
@@ -284,36 +284,28 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(12, 262);
+            this.lblDate.Location = new System.Drawing.Point(3, 262);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(95, 25);
+            this.lblDate.Size = new System.Drawing.Size(213, 25);
             this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "Bet Date";
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(180, 257);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(275, 30);
-            this.dtpDate.TabIndex = 8;
+            this.lblDate.Text = "Date (YYYY,MM,DD)";
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(12, 363);
+            this.lblResult.Location = new System.Drawing.Point(3, 375);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(110, 25);
+            this.lblResult.Size = new System.Drawing.Size(72, 25);
             this.lblResult.TabIndex = 6;
-            this.lblResult.Text = "Bet Result";
+            this.lblResult.Text = "Result";
             // 
             // rdoWin
             // 
             this.rdoWin.AutoSize = true;
             this.rdoWin.Checked = true;
             this.rdoWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoWin.Location = new System.Drawing.Point(199, 359);
+            this.rdoWin.Location = new System.Drawing.Point(243, 373);
             this.rdoWin.Name = "rdoWin";
             this.rdoWin.Size = new System.Drawing.Size(72, 29);
             this.rdoWin.TabIndex = 7;
@@ -331,6 +323,13 @@
             this.tbcAddRecord.Size = new System.Drawing.Size(482, 597);
             this.tbcAddRecord.TabIndex = 2;
             // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(243, 261);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(212, 26);
+            this.txtDate.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -343,7 +342,7 @@
             this.tpShowReport.PerformLayout();
             this.tpAddRecord.ResumeLayout(false);
             this.tpAddRecord.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHorseBet)).EndInit();
             this.tbcAddRecord.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -370,12 +369,12 @@
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.RadioButton rdoLose;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.RadioButton rdoWin;
         private System.Windows.Forms.TabControl tbcAddRecord;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picHorseBet;
         private System.Windows.Forms.Button btnClearDisplay;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }
 
