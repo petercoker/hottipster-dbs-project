@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
+using HotTipster.Utilities;
 using HotTipster.BusinessLogic;
+using HotTipster.DataAccess;
 
 namespace HotTipster
 {
     public partial class Form1 : Form
     {
         HotTipsterMethods hotTipsterMethods = new HotTipsterMethods();
+        Utilities.Utilities hotTipserUtilities = new Utilities.Utilities();
         public Form1()
         {
             InitializeComponent();
@@ -14,23 +19,29 @@ namespace HotTipster
 
         private void btnAddBet_Click(object sender, EventArgs e)
         {
-            if (txtBetID.Text == string.Empty || txtRacecourseName.Text == string.Empty ||
-                txtHorseName.Text == string.Empty || txtAmount.Text == string.Empty)
+            if (txtRaceCourse.Text == string.Empty || txtAmount.Text == string.Empty || txtDate.Text == string.Empty)
             {
                 MessageBox.Show("Must have a value");
             }
+            
             else
             {
-                var betID = int.Parse(txtBetID.Text);
-                var racecourseName = txtRacecourseName.Text;
-                var horseName = txtHorseName.Text;
-                var date = dtpDate.Value;
-                //var date = dtpDate.Text;
-                //var dateForm = DateTime.Parse(date);
+                var raceCourse = txtRaceCourse.Text.Trim();
+                var dateAndTime = txtDate.Text.Trim();
+                var date = hotTipserUtilities.ValidRaceDate(dateAndTime);
+                
+                //DateTime dateFormate = new DateTime(dateAndTime.Year, dateAndTime.Month, dateAndTime.Day);
+                //var date = dateFormate.ToString();
+                //var date = dtpDate.Value;
+                //var dateForm = dtpDate.Text;
+                //var date = DateTsime.ParseExact(dateForm, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                //var date = DateTime.Parse(dateForm);
+
+
 
                 try
                 {
-                    var amount = decimal.Parse(txtAmount.Text);
+                    var amount = decimal.Parse(txtAmount.Text.Trim());
                     bool result;
                     if (rdoWin.Checked)
                     {
@@ -43,7 +54,8 @@ namespace HotTipster
 
                     try
                     {
-                        hotTipsterMethods.AppendData(betID, racecourseName, horseName, date, amount, result);
+
+                       hotTipsterMethods.WriteToFile(raceCourse, date, amount, result);
                     }
 
                     catch (Exception exception)
@@ -51,9 +63,8 @@ namespace HotTipster
                         MessageBox.Show(exception.Message);
                     }
 
-                    txtBetID.Clear();
-                    txtRacecourseName.Clear();
-                    txtHorseName.Clear();
+                    txtRaceCourse.Clear();
+                    txtDate.Clear();
                     txtAmount.Clear();
 
                 }
@@ -64,13 +75,15 @@ namespace HotTipster
             }
         }
 
+        
+
         private void btnShowAllBetRecords_Click(object sender, EventArgs e)
         {
-            var horseBetRecord = "";
-
+            //var horseBetRecord = "";
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(horseBetRecord);
+                //rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords();
+                //rtbDisplay.Text = hotTipsterMethods.ShowAllBetRecords(horseBetRecord);
             }
             catch (Exception exception)
             {
@@ -94,20 +107,20 @@ namespace HotTipster
 
         private void btnCreateFileOfRecord_Click(object sender, EventArgs e)
         {
-            btnCreateFileOfRecord.Enabled = false;
-            try
-            {
-                hotTipsterMethods.WriteToTextFile();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
+            //btnCreateFileOfRecord.Enabled = false;
+            //try
+            //{
+            //    hotTipsterMethods.WriteToTextFile();
+            //}
+            //catch (Exception exception)
+            //{
+            //    MessageBox.Show(exception.Message);
+            //}
         }
 
         private void btnMaxProfitLoseByYear_Click(object sender, EventArgs e)
         {
-            txtRacecourseName.Clear();
+            txtRaceCourse.Clear();
             var horseBetRecord = "";
             try
             {
@@ -139,28 +152,14 @@ namespace HotTipster
 
             try
             {
-                rtbDisplay.Text = hotTipsterMethods.GetMostPopularRacecourseBets(horseBetRecord);
+                rtbDisplay.Text = hotTipsterMethods.GetMostPopularRaceCourseBets(horseBetRecord);
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
         }
-
-        private void btnFavouriteHorse_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetMostPopularHorse(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
-
+        
         private void btnBetsSuccessRate_Click(object sender, EventArgs e)
         {
             var horseBetRecord = "";
@@ -175,48 +174,14 @@ namespace HotTipster
             }
         }
 
-        private void btnMaxBetWon_Click(object sender, EventArgs e)
+        //private void fsbMoveScrollBar_Scroll(object sender, ScrollEventArgs e)
+        //{
+        //    fsbMoveScrollBar.Text = rtbDisplay.Text;
+        //}
+
+        private void btnClearDisplay_Click(object sender, EventArgs e)
         {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWon(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
-
-        private void btnMaxBetLost_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetMostAmountLost(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            var betID = int.Parse(txtBetIDNumber.Text);
-
-            try
-            {
-                rtbDisplay2.Text = hotTipsterMethods.GetHorseBetID(betID);
-                txtBetIDNumber.Clear();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
+            rtbDisplay.Clear();
         }
     }
 }
