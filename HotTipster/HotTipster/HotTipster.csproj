@@ -48,8 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\HorseBet.cs" />
-    <Compile Include="BusinessLogic\HorseNameEnum.cs" />
-    <Compile Include="BusinessLogic\RaceCourseEnum.cs" />
     <Compile Include="DataAccess\BetRecords.cs" />
     <Compile Include="DataAccess\HotTipsterMethods.cs" />
     <Compile Include="GUI\HotTipsterForm.cs">
