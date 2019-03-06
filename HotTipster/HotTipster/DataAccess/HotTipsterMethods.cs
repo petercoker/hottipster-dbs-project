@@ -25,10 +25,10 @@ namespace HotTipster.BusinessLogic
                     FileMode.Append, FileAccess.Write, FileShare.None))
                 using (var binaryWriter = new BinaryWriter(fileStream))
                 {
-                    var bet = new HorseBet(horseBet.BetID, horseBet.RacecourseName,
+                    var bet = new HorseBet(horseBet.BetID, horseBet.RaceCourse,
                     horseBet.HorseName, horseBet.Date, horseBet.Amount, horseBet.Result);
                     binaryWriter.Write(Environment.NewLine + horseBet.BetID);//.ToString());
-                    binaryWriter.Write(bet.RacecourseName);
+                    binaryWriter.Write(bet.RaceCourse);
                     binaryWriter.Write(bet.HorseName);
                     binaryWriter.Write(bet.Date.ToString());
                     binaryWriter.Write(bet.Amount.ToString());
@@ -49,7 +49,7 @@ namespace HotTipster.BusinessLogic
                 {
                     var bet = new HorseBet(betID, racecourseName, horseName, date, amount, result);
                     binaryWriter.Write(Environment.NewLine + bet.BetID);//.ToString());
-                    binaryWriter.Write(bet.RacecourseName);
+                    binaryWriter.Write(bet.RaceCourse);
                     binaryWriter.Write(bet.HorseName);
                     binaryWriter.Write(bet.Date.ToString());
                     binaryWriter.Write(bet.Amount.ToString());
@@ -87,7 +87,7 @@ namespace HotTipster.BusinessLogic
                         horseBets.Add(new HorseBet
                         {
                             BetID = betID,
-                            RacecourseName = racecourseName,
+                            RaceCourse = racecourseName,
                             HorseName = horseName,
                             Date = date,
                             Amount = amount,
@@ -144,7 +144,7 @@ namespace HotTipster.BusinessLogic
                 if (horseBet.BetID.Equals(betID))
                 {
                     return horseBetRecord = $"Bet ID: {horseBet.BetID}" +
-                                            $"\nRaceCourse Name: {horseBet.RacecourseName}" +
+                                            $"\nRaceCourse Name: {horseBet.RaceCourse}" +
                                             $"\nHorse Name: {horseBet.HorseName}" +
                                             $"\nDate: {horseBet.Date}" +
                                             $"\nAmount: {horseBet.Amount}" +
@@ -162,7 +162,7 @@ namespace HotTipster.BusinessLogic
         public string GetMostPopularRacecourseBets(string hourseBetRecord)
         {
             var horseBets = GetAllBetRecordData();
-            var racecourseName = horseBets.GroupBy(racecourse => racecourse.RacecourseName)
+            var racecourseName = horseBets.GroupBy(racecourse => racecourse.RaceCourse)
                 .OrderByDescending(popularRacecourse => popularRacecourse.Count())
                 .Select(popularRacecourse => popularRacecourse.Key).First();
 
@@ -201,7 +201,7 @@ namespace HotTipster.BusinessLogic
             horseBets = horseBets.OrderBy(date => date.Date).ToList();
             foreach (var horseBet in horseBets)
             {
-                horseBetRecord += ($"Bet ID: {horseBet.BetID}\nRaceCourse Name: {horseBet.RacecourseName}" +
+                horseBetRecord += ($"Bet ID: {horseBet.BetID}\nRaceCourse Name: {horseBet.RaceCourse}" +
                                    $"\nHorse Name: {horseBet.HorseName}\nDate: {horseBet.Date}" +
                                    $"\nAmount: {horseBet.Amount}\nWin or Lost: {horseBet.Result}")
                                    + Environment.NewLine;

@@ -5,7 +5,7 @@ namespace HotTipster
     public class HorseBet 
     {
         public int BetID { get; set; }
-        public string RacecourseName { get; set; }
+        public string RaceCourse { get; set; }
         public string HorseName { get; set; }
         public DateTime Date { get; set; }
         public decimal Amount { get; set; }
@@ -19,7 +19,7 @@ namespace HotTipster
             decimal amount, bool result)
         {
             BetID = betID;
-            RacecourseName = racecourseName;
+            RaceCourse = racecourseName;
             HorseName = horseName;
             Date = date;
             Amount = amount;
@@ -30,7 +30,7 @@ namespace HotTipster
             string horseName, decimal amount, bool result)
         {
             BetID = betID;
-            RacecourseName = raceCourseName;
+            RaceCourse = raceCourseName;
             HorseName = horseName;
             Amount = amount;
             Result = result;

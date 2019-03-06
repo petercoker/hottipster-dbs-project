@@ -92,18 +92,7 @@ namespace HotTipster
             }
         }
 
-        private void btnCreateFileOfRecord_Click(object sender, EventArgs e)
-        {
-            btnCreateFileOfRecord.Enabled = false;
-            try
-            {
-                hotTipsterMethods.WriteToTextFile();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
+        
 
         private void btnMaxProfitLoseByYear_Click(object sender, EventArgs e)
         {
@@ -147,19 +136,7 @@ namespace HotTipster
             }
         }
 
-        private void btnFavouriteHorse_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetMostPopularHorse(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
+        
 
         private void btnBetsSuccessRate_Click(object sender, EventArgs e)
         {
@@ -175,48 +152,9 @@ namespace HotTipster
             }
         }
 
-        private void btnMaxBetWon_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
+      
 
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetHighestAmountWon(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
 
-        private void btnMaxBetLost_Click(object sender, EventArgs e)
-        {
-            var horseBetRecord = "";
-
-            try
-            {
-                rtbDisplay.Text = hotTipsterMethods.GetMostAmountLost(horseBetRecord);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            var betID = int.Parse(txtBetIDNumber.Text);
-
-            try
-            {
-                rtbDisplay2.Text = hotTipsterMethods.GetHorseBetID(betID);
-                txtBetIDNumber.Clear();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
+       
     }
 }
